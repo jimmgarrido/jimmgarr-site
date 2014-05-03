@@ -3554,7 +3554,7 @@ a {
 .metro .horizontal-menu li {
   display: inline-block;
   margin: 0 15px;
-  padding: 0 0 15px;
+  padding: 0 0 20px;
   vertical-align: baseline;
   position: relative;
   font-family: 'Segoe UI_', 'Open Sans', Verdana, Arial, Helvetica, sans-serif;

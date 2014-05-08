@@ -14,6 +14,16 @@
 		<script src="js/jquery.widget.min.js"></script>
 		<script src="js/metro.min.js"></script>
 		
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$("#about").hide();
+				$("#projects").hide();
+			});
+			
+			$("#aboutLink").click(function() {
+				$("#about").toggle();
+			});
+		</script>
 	</head>
 	
 	<body class="metro" style="background-color:#00abec">
@@ -22,22 +32,23 @@
 				<div class="row">
 						<h1>Jimmy Garrido</h1>
 				</div>
-
-				
-						
-				
-					<div class="row">			
-						<nav class="horizontal-menu center" style="text-align:center;">
-							<ul style="color:white">
-								<li><a href="#" style="font-size:1.75em">About</a></li>
-								<li><a href="#" style="font-size:1.75em">Projects</a></li>
-								<li><a href="#" style="font-size:1.75em">Blog</a></li>
-							</ul>
-						</nav>
-					</div>
+				<div class="row">			
+					<nav class="horizontal-menu center" style="text-align:center;">
+						<ul style="color:white">
+							<li><a id="aboutLink" href=" " style="font-size:1.75em">About</a></li>
+							<li><a id="projectLink" href="#" style="font-size:1.75em">Projects</a></li>				
+						</ul>
+					</nav>
 				</div>
-			<div class="grid">
+			</div>
+			<div id="about" class="grid">
 				<div class="row">
+					<p>Much minimalism. Wow.
+				</div>
+			</div>
+			<div id="projects" class="grid">
+				<div class="row">
+					<p>Much minimalism. Wow.
 				</div>
 			</div>
 			<div class="row">

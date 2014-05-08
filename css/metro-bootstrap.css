@@ -867,8 +867,11 @@ a {
   font-weight: 300;
   color: #000000;
   letter-spacing: 0.00em;
-  font-size: 4.8rem;
-  line-height: 4.8rem;
+
+  line-height: 1.1em;
+	color:white; 
+	font-size:80px; 
+	text-align:center
 }
 .metro h2 {
   font-family: 'Segoe UI Light_', 'Open Sans Light', Verdana, Arial, Helvetica, sans-serif;

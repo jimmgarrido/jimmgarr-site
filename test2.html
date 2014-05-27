@@ -15,14 +15,6 @@
 		<script src="js/metro.min.js"></script>
 		
 		<script type="text/javascript">
-			$(document).ready(function() {
-				$("#about").hide();
-				$("#projects").hide();
-			});
-			
-			$("#aboutLink").click(function() {
-				$("#about").toggle();
-			});
 		</script>
 	</head>
 	
@@ -32,44 +24,45 @@
 				<div class="row">
 						<h1>Jimmy Garrido</h1>
 				</div>
-				<div class="row">			
+				<div id="nav" class="row">			
 					<nav class="horizontal-menu center" style="text-align:center;">
 						<ul style="color:white">
-							<li><a id="aboutLink" href=" " style="font-size:1.75em">About</a></li>
-							<li><a id="projectLink" href="#" style="font-size:1.75em">Projects</a></li>				
+							<li><a id="aboutLink" href="#" style="font-size:1.75em">About</a></li>
+							<li><a id="projectLink" href="#" style="font-size:1.75em">Projects</a></li>								
 						</ul>
 					</nav>
 				</div>
 			</div>
-			<div id="about" class="grid">
+			<div class="grid">
 				<div class="row">
-					<p>Much minimalism. Wow.
+				<a href="https://github.com/jimmgarrido/nexMuni">
+					<div class="tile double bg-darkCyan" data-click="transform">
+						<img src="assets/nexMUNI_og.png" style="height:180px; width:180px; margin-left:10px;margin-top:10px;">
+						<p style="margin-left:190px; margin-top:-175px; font-size:1.75em;text-align:center;color:white">nexMUNI</p>
+						<p style="margin-left:190px; font-size:1.30em; text-align:center;padding-left:15px; padding-right:15px;color:white">Real-time Muni arrival app for Windows Phone 8.1</p>
+					</div>
+					</a>
+					<div class="span4">
+						<div class="bg-darkCyan" style="height:200px">
+						</div>
+					</div>
 				</div>
-			</div>
-			<div id="projects" class="grid">
-				<div class="row">
-					<p>Much minimalism. Wow.
-				</div>
-			</div>
-			<div class="row">
-				<div>
-					<nav class="horizontal-menu compact" style="text-align:center">
-						<ul>
+				<nav class="horizontal-menu compact" style="text-align:center">
+					<ul>
+						<li>
+							<a href="https://twitter.com/jimmgarrido">
+								<i class="icon-twitter lg on-right" style="font-size:30px;color:#505050">
+							</a></i></li>
 							<li>
-								<a href="https://twitter.com/jimmgarrido">
-									<i class="icon-twitter lg on-right" style="font-size:30px;color:#505050">
-								</a></i></li>
-								<li>
-								<a href="https://github.com/jimmgarrido">
-									<i class="icon-github on-right" style="font-size:35px; color:#505050">
-								</a></i></li>
-								<li>
-								<a href="https://twitter.com/jimmgarrido">
-									<i class="icon-mail on-right" style="font-size:30px; color:#505050">
-								</a></i></li>
-						</ul>
-					</nav>
-				</div>
+							<a href="https://github.com/jimmgarrido">
+								<i class="icon-github on-right" style="font-size:35px; color:#505050">
+							</a></i></li>
+							<li>
+							<a href="mailto:jimmygarrido@outlook.com">
+								<i class="icon-mail on-right" style="font-size:30px; color:#505050">
+							</a></i></li>
+					</ul>
+				</nav>
 			</div>
 		</div>
 	</body>

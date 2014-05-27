@@ -4851,7 +4851,8 @@ a {
   height: 55px;
 }
 .metro .tile.double {
-  width: 250px;
+	height: 200px;
+  width: 400px;
 }
 .metro .tile.double-vertical {
   height: 250px;

@@ -1,14 +1,224 @@
----
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1"></meta>
 
-layout: homepage
+		<title>Jimmy Garrido</title>
 
----
 
-<h2 style="color:white" >Blog<h2>
-<ul>
-  {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-    </li>
-  {% endfor %}
-</ul>
+		<link rel="stylesheet" href="css/metro-bootstrap.css">
+		<link rel="stylesheet" href="css/metro-bootstrap-responsive.min.css">
+		<link rel="stylesheet" href="css/iconFont.min.css">
+		
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.widget.min.js"></script>
+		<script src="s/metro.min.js"></script>
+		
+		<script type="text/javascript">
+		</script>
+		
+		<style>
+		#header {
+			background-color:#fa6800;
+			height: 290px;
+			margin-top:-10px;
+			padding-top:20px;
+		}
+		
+		#header-phone {
+			background-color:#fa6800;
+			height: 170px;
+			margin-top:-10px;
+			padding-top:20px;
+		}
+		
+		.text-centered {
+			text-align:center;
+		}
+		
+		.metro h2 {
+			font-size:1.3em;
+		}
+		
+		.center-image {
+			margin:0 auto 0 auto;
+			display: block;
+		}
+		</style>
+	</head>
+	
+	<body class="metro">
+		<section id="header" class="grid no-phone">
+			<div class="container text-centered">
+				<h1 style="font-size:2.9em">Welcome,</h1>
+				<h1 style="font-size:2.9em">My name is <strong>Jimmy Garrido</strong>.</h1>
+				<h1 style="font-size:2.5em">I'm a <strong>student</strong> and <strong>developer</strong></h1>
+				<h1 style="font-size:2.5em">based in <strong>San Francisco, CA</strong>.</h1>
+			</div>
+		</section>
+		
+		<section id="header-phone" class="grid on-phone no-desktop no-tablet">
+			<div class="container text-centered">
+				<h1 style="font-size:2.6em">Welcome,</h1>
+				<h1 style="font-size:2.6em">My name is <strong>Jimmy Garrido</strong>.</h1>
+				<h1 style="font-size:2.1em">I'm a <strong>student</strong> and <strong>developer</strong></h1>
+				<h1 style="font-size:2.1em">based in <strong>San Francisco, CA</strong>.</h1>
+			</div>
+		</section>
+		
+		<section class="grid no-phone">
+			<div class="container">
+				<div class="grid" style="padding-top:5px">
+					<div class="row">
+						<div class="span8">
+							<h1 style="color:black; font-size:2.4em; text-align:left">About Me</h1>
+							<div class="row" style="padding-top:10px">
+								<div class="span3">
+									<img src="assets/me.jpg" style="height:160px"/>
+								</div>
+								<div class="span5" style="margin-left:-10px">
+									<p style="font-size:12pt">
+										I was born and raised in California and am currently attending 
+										San Francisco State University for a B.S in Computer Science. 
+										My skills include C#, Java, and C++ and development of apps 
+										for Windows Phone and Android.</p>
+										<a href="http://nexdev.co">
+										<p style="font-size:12pt; margin-top:25px; color:#0092fa">
+										Current projects be seen here at the nexDev site</p></a>
+								</div>
+							</div>
+						</div>
+						<div class="span4" style="padding-left:80px">
+							<h1 style="color:black; font-size:2.4em; text-align:left; margin-bottom:25px">Contact</h1>
+							<h2>Email: <a href="mailto:jimmy@nexdev.co" style="color:#0092fa">jimmy@nexdev.co</a></h2>
+							<h2>Github: <a href="https://github.com/jimmgarrido" style="color:#0092fa">jimmgarrido</a></h2>
+							<h2>Twitter: <a href="https://twitter.com/jimmgarrido" style="color:#0092fa">@jimmgarrido</a></h2>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<section class="grid on-phone no-desktop no-tablet">
+			<div class="container">
+				<div class="grid" style="margin-top:-10px">
+					<div class="row">
+						<div class="span8">
+							<h1 style="color:black; font-size:2.6em; text-align:center">About Me</h1>
+							<div class="row" style="padding-top:5px">
+								<div class="span3">
+									<img src="assets/me.jpg" class="center-image" style="height:90px;"/>
+								</div>
+								<div class="span5" style="margin-left:-10px; padding: 0 8px 0 8px; text-align:center">
+									<p style="font-size:1.5em;">
+										I was born and raised in California and am currently attending 
+										San Francisco State University for a B.S in Computer Science. 
+										My skills include C#, Java, and C++ and development of apps 
+										for Windows Phone and Android.</p>
+										<a href="http://nexdev.co">
+										<p style="font-size:1.5em; margin-top:20px; color:#0092fa">
+										Current projects be seen here at the nexDev site</p></a>
+								</div>
+							</div>
+						</div>
+						<div class="span4" style="text-align:center">
+							<h1 style="color:black; font-size:2.4em; text-align:center; margin-bottom:25px">Contact</h1>
+							<h2 style="font-size:1.7em">Email: <a href="mailto:jimmy@nexdev.co" style="color:#0092fa">jimmy@nexdev.co</a></h2>
+							<h2 style="font-size:1.7em">Github: <a href="https://github.com/jimmgarrido" style="color:#0092fa">jimmgarrido</a></h2>
+							<h2 style="font-size:1.7em">Twitter: <a href="https://twitter.com/jimmgarrido" style="color:#0092fa">@jimmgarrido</a></h2>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	
+<!-- 		<div class="container">
+			<div class="grid">
+				<div class="row">
+						<h1>Jimmy Garrido</h1>
+				</div>
+				<br>
+				<br>
+				<div style="text-align:left;">
+					<h2 style="color:white">Projects</h2>
+				</div>
+			</div>
+			<div class="grid">
+				<div class="row no-phone no-tablet">
+					<a href="http://jimmygarrido.co/nexMuni">
+						<div class="tile double bg-darkCyan" data-click="transform">
+							<img src="../assets/nexmuni.png" style="height:130px; width:130px; margin-left:10px;margin-top:10px;">
+							<p style="margin-left:175px; margin-top:-130px; font-size:1.75em;text-align:center;color:white">nexMuni</p>
+							<p style="margin-left:175px; margin-top:20px;font-size:1.03em; text-align:center;padding-left:10px; padding-right:10px;color:white">Real-time Muni arrival app for Windows Phone 8.1</p>
+						</div>
+					</a>
+					<a href="https://github.com/jimmgarrido/azurestorage">
+						<div class="tile double bg-darkCyan" data-click="transform">
+							<img src="../assets/azure.png" style="height:130px; width:130px; margin-left:10px;margin-top:10px;">
+							<p style="margin-left:175px; margin-top:-130px; font-size:1.75em;text-align:center;color:white">Blobr</p>
+							<p style="margin-left:175px; margin-top:20px;font-size:1.03em; text-align:center;padding-left:15px; padding-right:15px;color:white">Explorer to view, upload, and download from Azure.</p>
+						</div>
+					</a>
+				</div>
+				<div class="row no-desktop no-tablet on-phone">
+					<a href="http://jimmygarrido.co/nexMuni">
+						<div class="tile double bg-darkCyan" data-click="transform" style="width:280px; height:120px">
+							<img src="../assets/nexmuni.png" style="height:100px; margin-left:10px;margin-top:10px;">
+							<p style="margin-left:110px; margin-top:-95px; font-size:1.65em;text-align:center;color:white">nexMUNI</p>
+							<p style="margin-left:110px; font-size:1.20em; text-align:center;padding-left:12px; padding-right:12px;color:white">Real-time Muni arrival app for Windows Phone 8.1</p>
+						</div>
+					</a>
+					<a href="https://github.com/jimmgarrido/azurestorage">
+						<div class="tile double bg-darkCyan" data-click="transform" style="width:280px; height:120px">
+							<img src="../assets/azure.png" style="height:100px; margin-left:10px;margin-top:10px;">
+							<p style="margin-left:110px; margin-top:-95px; font-size:1.65em;text-align:center;color:white">Blobr</p>
+							<p style="margin-left:110px; font-size:1.20em; text-align:center;padding-left:12px; padding-right:12px;color:white">Explorer to view, upload, and download from Azure.</p>
+						</div>
+					</a>
+				</div>
+				<div style="text-align:left;">
+					<div style="text-align:left;">
+	<h2 style="color:white">Blog</h2>
+</div>
+<div class="grid">
+	<dl style="color:white; font-size:1.2em;">
+	
+		<a href="/2014/08/11/5%20Things%20I%20Learned%20After%20A%20Music%20Festival.html" style="color:white">
+			<dt style="padding-bottom:5px">5 Things I Learned After A Musical Festival</dt>
+		</a>
+		
+		<dd>I had never attended a musical festival prior to this years Outside Lands. I had always seen and heard people who've attended festivals before and this year's lineup had some bands I liked so I thought why not give it a shot.</dd>
+		
+	
+		<a href="/2014/07/27/nexDevelopment.html" style="color:white">
+			<dt style="padding-bottom:5px">Nexdevelopment</dt>
+		</a>
+		
+	
+	</dl>
+</div>
+				</div>
+				<nav class="horizontal-menu compact" style="text-align:center">
+					<ul>
+						<li>
+							<a href="https://twitter.com/jimmgarrido">
+								<i class="icon-twitter" style="font-size:32px;color:white; opacity:.75">
+							</a></i></li>
+							<li>
+							<a href="https://github.com/jimmgarrido">
+								<i class="icon-github" style="font-size:32px; color:white; opacity:.75">
+							</a></i></li>
+							<li>
+							<a href="https://linkedin.com/pub/jimmy-garrido/74/402/b21/">
+								<i class="icon-linkedin" style="font-size:32px; color:white; opacity:.75">
+							</a></i></li>
+							<li>
+							<a href="mailto:jimmygarrido@nexdev.co">
+								<i class="icon-mail" style="font-size:32px; color:white; opacity:.75">
+							</a></i></li>
+					</ul>
+				</nav>
+			</div>
+		</div> -->
+	</body>
+</html>

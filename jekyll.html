@@ -1,0 +1,21 @@
+---
+
+layout: homepage
+
+---
+
+<div style="text-align:left;">
+	<h2 style="color:white">Blog</h2>
+</div>
+<div class="grid">
+	<dl style="color:white; font-size:1.2em;">
+	{% for post in site.posts limit:5 %}
+		<a href="{{ post.url }}" style="color:white">
+			<dt style="padding-bottom:5px">{{ post.title }}</dt>
+		</a>
+		{% if post.description %}
+		<dd>{{ post.description }}</dd>
+		{% endif %}
+	{% endfor %}
+	</dl>
+</div>

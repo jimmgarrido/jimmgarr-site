@@ -969,8 +969,8 @@ a {
   letter-spacing: 0.02em;
 }
 .metro strong {
-  font-family: 'Segoe UI Semibold_', 'Open Sans Bold', Verdana, Arial, Helvetica, sans-serif;
-  font-weight: bold;
+  font-family: 'Segoe UI ', 'Open Sans Bold', Verdana, Arial, Helvetica, sans-serif;
+  
 }
 .metro .text-muted {
   color: #999999 !important;

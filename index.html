@@ -15,19 +15,26 @@
 		<script src="s/metro.min.js"></script>
 		
 		<script type="text/javascript">
+			$(function(){
+				colors_of_the_rainbow = ["#A4C400", "#60A917", "#008A00", "#00ABA9", "#1BA1E2", "#0050EF", 
+																"#6A00FF", "#AA00FF", "#D80073", "#A20025", "#E51400", "#FA6800",
+																"#F0A30A", "#E3C800", "#76608A"];
+				$("#header").css("background-color", colors_of_the_rainbow[Math.floor(Math.random() * colors_of_the_rainbow.length)]);
+				$("#header-phone").css("background-color", colors_of_the_rainbow[Math.floor(Math.random() * colors_of_the_rainbow.length)]);
+			});
 		</script>
 		
 		<style>
 		#header {
 			background-color:#fa6800;
-			height: 290px;
+			height: 210px;
 			margin-top:-10px;
 			padding-top:20px;
 		}
 		
 		#header-phone {
 			background-color:#fa6800;
-			height: 170px;
+			height: 175px;
 			margin-top:-10px;
 			padding-top:20px;
 		}
@@ -50,10 +57,10 @@
 	<body class="metro">
 		<section id="header" class="grid no-phone">
 			<div class="container text-centered">
-				<h1 style="font-size:2.9em">Welcome,</h1>
-				<h1 style="font-size:2.9em">My name is <strong>Jimmy Garrido</strong>.</h1>
-				<h1 style="font-size:2.5em">I'm a <strong>student</strong> and <strong>developer</strong></h1>
-				<h1 style="font-size:2.5em">based in <strong>San Francisco, CA</strong>.</h1>
+				<h1 style="font-size:2.8em">Welcome,</h1>
+				<h1 style="font-size:2.8em">My name is <strong>Jimmy Garrido</strong>.</h1>
+				<h1 style="font-size:2.4em">I'm a <strong>student</strong> and <strong>developer</strong> based in <strong>San Francisco, CA</strong></h1>
+				<!--<h1 style="font-size:2.5em">based in <strong>San Francisco, CA</strong>.</h1>-->
 			</div>
 		</section>
 		

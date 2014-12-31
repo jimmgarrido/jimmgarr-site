@@ -3,19 +3,71 @@
 layout: homepage
 
 ---
-
-<div style="text-align:left;">
-	<h2 style="color:white">Blog</h2>
-</div>
-<div class="grid">
-	<dl style="color:white; font-size:1.2em;">
-	{% for post in site.posts limit:5 %}
-		<a href="{{ post.url }}" style="color:white">
-			<dt style="padding-bottom:5px">{{ post.title }}</dt>
-		</a>
+{% for post in site.posts limit:1 %}
+<!--Blog layout for bigger toys-->
+<div class="row no-phone" style="padding-top:10px; margin-bottom:35px">
+	<div class="span2">
+		<div id="date-block">
+			<h3 class="date">
+				{% assign m = post.date | date: "%B" %} 
+				{% case m %}
+				  {% when 'April' or 'May' or 'June' or 'July' %}{{ m }}
+				  {% when 'September' %}Sept
+				  {% else %}{{ post.date | date: "%b" }}
+				{% endcase %}
+				
+			</h3>
+			<h3 class="date">
+				{% assign d = post.date | date: "%-d" %}
+				{% case d %}
+				  {% when '1' or '21' or '31' %}{{ d }}st
+				  {% when '2' or '22' %}{{ d }}nd
+				  {% when '3' or '23' %}{{ d }}rd
+				  {% else %}{{ d }}th
+				{% endcase %}
+			</h3>
+		</div>
+	</div>
+	<div class="span6">
+		<a href="{{ post.url }}">
+			<h3>{{ post.title }}</h3></a>
 		{% if post.description %}
-		<dd>{{ post.description }}</dd>
+		<p>{{ post.description }}</p>
 		{% endif %}
-	{% endfor %}
-	</dl>
+	</div>
 </div>
+
+<!--Blog layout for mobile-->
+<div class="row on-phone no-desktop no-tablet"  style="margin-bottom:35px">
+	<div class="span2">
+		<div id="mobile-date-block">
+			<h3 class="date-mobile">
+				{% assign m = post.date | date: "%B" %} 
+				{% case m %}
+				  {% when 'April' or 'May' or 'June' or 'July' %}{{ m }}
+				  {% when 'September' %}Sept
+				  {% else %}{{ post.date | date: "%b" }}
+				{% endcase %}
+				
+			</h3>
+			<h3 class="date-mobile">
+				{% assign d = post.date | date: "%-d" %}
+				{% case d %}
+				  {% when '1' or '21' or '31' %}{{ d }}st
+				  {% when '2' or '22' %}{{ d }}nd
+				  {% when '3' or '23' %}{{ d }}rd
+				  {% else %}{{ d }}th
+				{% endcase %}
+			</h3>
+		</div>
+	</div>
+	<div class="span9">
+		<a href="{{ post.url }}">
+			<h3 id="mobile-h3">{{ post.title }}</h3></a>
+		{% if post.description %}
+		<p id="mobile-p">{{ post.description }}</p>
+		<p id="mobile-p"><a href="{{ post.url }}"> Read More</a></p>
+		{% endif %}
+	</div>
+</div>
+{% endfor %}

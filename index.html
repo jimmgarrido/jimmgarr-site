@@ -5,7 +5,7 @@ layout: homepage
 ---
 {% for post in site.posts limit:1 %}
 <!--Blog layout for bigger toys-->
-<div class="row no-phone" style="padding-top:10px; margin-bottom:35px">
+<div class="row no-phone no-tablet" style="padding-top:10px; margin-bottom:35px">
 	<div class="span2">
 		<div id="date-block">
 			<h3 class="date">
@@ -28,7 +28,7 @@ layout: homepage
 			</h3>
 		</div>
 	</div>
-	<div class="span6">
+	<div class="span5" style="margin-left: -15px">
 		<a href="{{ post.url }}">
 			<h3>{{ post.title }}</h3></a>
 		{% if post.description %}

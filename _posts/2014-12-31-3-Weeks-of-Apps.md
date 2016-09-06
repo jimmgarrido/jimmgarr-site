@@ -7,13 +7,13 @@ With the holidays coming to an end, I still have plenty of time until my next sc
 
 I'm calling it the 3 Weeks of Apps. 
 
-###What Is It?
+### What Is It?
 It's exactly what is sounds like: I'll be trying to make three different apps in three weeks. It's also as crazy as it sounds like because I'll be trying to finish one app per week. The apps I'm currently thinking of making are 1) a BART app for Windows Phone, 2) a Hipchat app for Windows Phone and 3) an app for [Preserve](https://preserve.io/) for all three platforms.
 
-###When Is It?
+### When Is It?
 The 3 Weeks of Apps officially starts on Monday, Jan. 5th and goes until Saturday, Jan 24th.
 
-###Why?
+### Why?
 Good question. 
 
 Mostly it's for the experience I will gain. For the Preserve app I'll be using [Xamarin](http://xamarin.com/platform) so I can code in C# and not spend time learning a different language. It'll be my first time using Xamarin to build a proper app so it'll be a nice way to jumpstart the learning process. I'll be blogging during each apps' development as well so I can track my progress. The blog will be over at my development site [nexDevelopment](http://nexdev.co).

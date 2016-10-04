@@ -3,10 +3,10 @@
 layout: homepage
 
 ---
-{% for post in site.posts limit:1 %}
+{% for post in site.posts limit:3 %}
 <!--Blog layout for bigger toys-->
 <div class="row no-phone" style="padding-top:10px; margin-bottom:35px">
-	<div class="span2">
+	<div class="cell size2">
 		<div id="date-block">
 			<h3 class="date">
 				{% assign m = post.date | date: "%B" %} 
@@ -18,22 +18,15 @@ layout: homepage
 				
 			</h3>
 			<h3 class="date">
-				{% assign d = post.date | date: "%-d" %}
-				{% case d %}
-				  {% when '1' or '21' or '31' %}{{ d }}st
-				  {% when '2' or '22' %}{{ d }}nd
-				  {% when '3' or '23' %}{{ d }}rd
-				  {% else %}{{ d }}th
-				{% endcase %}
+				{{ post.date | date: "%-d" }}
 			</h3>
 		</div>
 	</div>
-	<div class="span5" style="margin-left: -15px">
+	<div class="cell size10  post-details">
 		<a href="{{ post.url }}">
 			<h3>{{ post.title }}</h3></a>
-		{% if post.description %}
-		<p>{{ post.description }}</p>
-		{% endif %}
+			<p id="post-desc">{{ post.description }}</p>
+			<p id="post-excerpt">{{ post.excerpt | remove: '<p>' | remove: '</p>' }}</p>
 	</div>
 </div>
 

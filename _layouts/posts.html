@@ -7,19 +7,18 @@
 		<title>{{ page.title }} </title>
 
 
-		<link rel="stylesheet" href="../../../css/metro-bootstrap.css">
-		<link rel="stylesheet" href="../../../css/metro-bootstrap-responsive.min.css">
-		<link rel="stylesheet" href="../../../css/iconFont.min.css">
+		<link rel="stylesheet" href="../../../css/metro.css">
+		<link rel="stylesheet" href="../../../css/metro-responsive.css">
+		<link rel="stylesheet" href="../../../css/metro-icons.css">
 		
 		<script src="../../../js/jquery.min.js"></script>
-		<script src="../../../js/jquery.widget.min.js"></script>
-		<script src=",./../../js/metro.min.js"></script>
+		<script src="../../../js/metro.min.js"></script>
 		
 		<script type="text/javascript">
 			var RandomColor = function(){
 				colors_of_the_rainbow = ["#A4C400", "#60A917", "#008A00", "#00ABA9", "#1BA1E2", "#0050EF", 
-																"#6A00FF", "#AA00FF", "#D80073", "#A20025", "#E51400", "#FA6800",
-																"#F0A30A", "#76608A"];
+										"#6A00FF", "#AA00FF", "#D80073", "#A20025", "#E51400", "#FA6800",
+										"#F0A30A", "#76608A"];
 																
 			var color = colors_of_the_rainbow[Math.floor(Math.random() * colors_of_the_rainbow.length)];												
 			
@@ -34,34 +33,54 @@
 		</script>
 		
 		<style>
-			.metro p{
-				color:rgba(0, 0, 0, 1.0);
-				font-size:18px;
-				line-height: 20pt;
-				letter-spacing:0.30px;
-				margin:0 0 15pt 0;
-				font-family: "Segoe UI Light", "Open Sans Light", Verdana, Arial, Helvetica, sans-serif;
+			.metro h1 {
+				font-family: "Segoe UI Light","Open Sans Light",sans-serif,serif;
+				font-size: 2.5rem;
+				text-align: center;
+				margin: 1em 0 1em 0;
+				color: rgba(0,0,0,0.6);
 			}
 			
-			.metro h3{
+			.metro p {
+				color:rgba(0, 0, 0, 0.8);
+				font-size: 0.95rem;
+				line-height: 20pt;
+				letter-spacing:0.30px;
+				font-family: "Segoe UI SemiLight", "Open Sans Light", Verdana, Arial, Helvetica, sans-serif;
+			}
+			
+			.metro h3 {
+				font-family: "Segoe UI", "Open Sans Light", Verdana, Arial, Helvetica, sans-serif;
 				padding:10px 0 10px 0;
-				font-size: 23px;
-				letter-spacing:0.01em;
+				font-size: 1.2rem;
+				color: rgba(0, 0, 0, 0.7);				
 			}
 			
 			.metro h4 {
-				font-size:17px;
+				font-family: "Segoe UI", "Open Sans", Verdana, Arial, Helvetica, sans-serif;
+				font-size: 1.1rem;
+				color: rgba(0, 0, 0, 0.7);
 			}
 			
 			.metro .horizontal-menu {
-				text-align:center; background-color:white; margin-bottom: 40px
+				/*text-align:center; 
+				background-color:white;
+				margin-bottom: 40px*/
+			}
+
+			.post-content {
+				margin: 0 0 2.5em 0;
+			}
+
+			#signature {
+				text-align: center;
 			}
 			
 			#home-link {
 				font-size:20px; 
 				margin: 0; 
 				padding: 0; 
-				color:white;
+				color: white;
 			}
 			
 		</style>
@@ -69,18 +88,12 @@
 	
 	<body class="metro">
 		<!--Nav for desktop-->
-		<nav class="navigation-bar no-phone no-tablet">
-			<nav class="navigation-bar-content">
-				<a href="http://jimmygarrido.co">
-					<div class="element" style="padding-top:6px">
-						<h2 id="home-link">Home</h2>
-					</div>
-				</a>
-			</nav>
+		<nav class="app-bar no-phone no-tablet">
+			<a class="app-bar-element" href="http://jimmgarr.com"> Home</a>
 		</nav>
 		
 		<!--Nav for tablet-->
-		<nav class="navigation-bar on-tablet no-phone no-desktop">
+		<nav class="navigation-bar on-tablet no-phone no-pc">
 			<nav class="navigation-bar-content">
 				<a href="http://jimmygarrido.co">
 					<div class="element" style="padding-top:10px">
@@ -91,7 +104,7 @@
 		</nav>
 		
 		<!--Nav for mobile-->
-		<nav class="navigation-bar on-phone no-tablet no-desktop">
+		<nav class="navigation-bar on-phone no-tablet no-pc">
 			<nav class="navigation-bar-content">
 				<a href="http://jimmygarrido.co">
 					<div class="element" style="padding-top:12px">
@@ -102,18 +115,15 @@
 		</nav>
 		
 		<!--Content area for desktop-->
-		<section class="grid no-phone">
-			<div class="container">
-				<div class="grid" style="padding-top:20px; padding-bottom:10px; width:850px; margin: 0 auto 0 auto">	
-					<h1 style="font-size:3.2em; margin-bottom:30px; color:rgba(0, 0, 0, 0.6)"> {{ page.title }} </h1>
-					<h4 style="margin-bottom:30px; color:rgba(0, 0, 0, 0.6)">{{ page.date | date_to_string }}</h4>
-					{{ content }}
-				</div>
-			</div>
+		<section class="flex-grid no-phone" style="width:900px; margin: 0 auto 2.5em auto">	
+			<h1> {{ page.title }} </h1>
+			<div class="post-content">{{ content }}</div>
+			<h4 id="signature">Jimmy Garrido | {{ page.date | date_to_string }}</h4>
+			</section>
 		</section>
 		
 		<!--Content area for mobile-->
-		<section class="grid on-phone no-tablet no-desktop">
+		<section class="grid on-phone no-tablet no-pc">
 			<div class="container">
 				<div class="grid" style="padding:20px 5px 10px 5px;">	
 					<h1 style="font-size:3.3em; margin-bottom:30px; color:rgba(0, 0, 0, 0.6)"> {{ page.title }} </h1>
@@ -123,13 +133,8 @@
 			</div>
 		</section>
 		
-		<!--Footer for desktop-->
-		<nav class="horizontal-menu compact no-phone no-tablet" style="text-align:center; background-color:white; margin-bottom:40px">
-			<p>-- Jimmy Garrido</p>
-		</nav>
-		
 		<!--Footer for mobile-->
-		<nav class="horizontal-menu compact on-phone no-desktop no-tablet" style="text-align:center; background-color:white; margin-bottom: 40px">
+		<nav class="horizontal-menu compact on-phone no-pc no-tablet" style="text-align:center; background-color:white; margin-bottom: 40px">
 			<p>-- Jimmy Garrido</p>
 		</nav>
 	</body>

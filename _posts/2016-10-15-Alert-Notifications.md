@@ -1,3 +1,9 @@
+---
+layout: posts
+title: Local Notifcations On macOS With Xamarin
+description: 
+---
+
 Notifications can be useful for providing critical information or grabbing the user's attention, and they can be used not on mobile but on the desktop as well. On MacOS, this can be done using the `NSUserNotification` and `NSUserNotificationCenter` classes. 
 
 *Note: this post talks about local notifications, not remote (push) notifications.*
@@ -9,7 +15,8 @@ Apps use will use the [banner style by default](https://developer.apple.com/libr
 [image]
 
 
-## Configure Your App for Alert Notifications
+
+## Configure Your App
 
 Alert notifications do not go away automatically and provide buttons for dismissing and other actions. But before you can use them in your app, you will need to do a couple of things:
 
@@ -37,10 +44,12 @@ And since the main purpose of an alert notification is to perform some action ba
 
  In order to add more actions, there is the `AdditionalActions` property available which takes an array of `NSUserNotificationAction`:
  
+ {% highlight csharp linenos %}
     not.AdditionalActions = new NSUserNotificationAction[] { 
         NSUserNotificationAction.GetAction("additional","Additional action"),
         NSUserNotificationAction.GetAction("more","More")
     };
+{% endhighlight %}
             
 The additional actions can be seen by clicking and holding the main action button:
 
@@ -51,20 +60,22 @@ The additional actions can be seen by clicking and holding the main action butto
 
 When a user interacts with a notification, the `NSUserNotificationCenter.DidActivateNotification` delegate will be called. Inside the delegate you can get the `ActivationType` property to see what activated it, and if it was due to one of the additional actions you can then use the `AdditionalActivationAction` property to determine which one.
 
-    center.DidActivateNotification += (s, e) => 
-	{
-        switch (e.Notification.ActivationType)
-        {
-            case NSUserNotificationActivationType.ContentsClicked:
-                Console.WriteLine("Notification Touched");
-                break;
-            case NSUserNotificationActivationType.ActionButtonClicked:
-                Console.WriteLine("Action Selected");
-                break;
-            default:
-                break;
-        }
-    };
+{% highlight csharp linenos %}
+center.DidActivateNotification += (s, e) => 
+{
+    switch (e.Notification.ActivationType)
+    {
+        case NSUserNotificationActivationType.ContentsClicked:
+            Console.WriteLine("Notification Touched");
+            break;
+        case NSUserNotificationActivationType.ActionButtonClicked:
+            Console.WriteLine("Action Selected");
+            break;
+        default:
+            break;
+    }
+};
+{% endhighlight %}
 
 
 ## Known Issues
@@ -72,6 +83,6 @@ Unfortunately there are currently some issues with `NSUserNotification` in Xamar
 
 First, as of Xamarin.Mac 2.10 the `NSUserNotification` class does not expose some important properties such as `AdditionalActions` or `ContentImage`. Luckily there are coming in the Xamarin.Mac 3.0 release which is currently in the [alpha preview stage](https://releases.xamarin.com/alpha-preview-xamarin-mac-support-on-macos-10-12-sierra/).
 
-Second, the `NSUserNotificationActivationType` enumeration is incomplete: [Apple](https://developer.apple.com/reference/foundation/nsusernotification.activationtype) | [Xamarin](https://developer.xamarin.com/api/type/MonoMac.Foundation.NSUserNotificationActivationType/) 
+Second, the `NSUserNotificationActivationType` enumeration is incomplete: [Apple](https://developer.apple.com/reference/foundation/nsusernotification.activationtype) / [Xamarin](https://developer.xamarin.com/api/type/MonoMac.Foundation.NSUserNotificationActivationType/) 
 
 You can see that it is missing the two newer activation types added in MacOS 10.9 and 10.10. This really isn't an issue as you can't even have additional actions or a reply button right now, but I've opened a [bug report](https://bugzilla.xamarin.com/show_bug.cgi?id=45526) nonetheless.

@@ -6,13 +6,12 @@
 		
 		<title>Jimmy Garrido</title>
 
-		<link rel="stylesheet" href="css/metro-bootstrap.css">
-		<link rel="stylesheet" href="css/metro-bootstrap-responsive.min.css">
-		<link rel="stylesheet" href="css/iconFont.min.css">
+		<link rel="stylesheet" href="css/metro.css">
+		<link rel="stylesheet" href="css/metro-responsive.css">
+		<link rel="stylesheet" href="css/metro-icons.css">
 		
 		<script src="js/jquery.min.js"></script>
-		<script src="js/jquery.widget.min.js"></script>
-		<script src="s/metro.min.js"></script>
+		<script src="js/metro.min.js"></script>
 		
 		<script type="text/javascript">
 			var RandomColor = function(){
@@ -35,20 +34,17 @@
 		<style>
 			#header {
 				background-color:#fa6800;
-				height: 185px;
-				margin-top:-10px;
-				padding-top:20px;
+				height: 125px;
+				padding-top: 10px;
 			}
 			
 			#header-phone {
-				background-color:#fa6800;
+				background-color:#000000;
 				height: 175px;
-				margin-top:-10px;
-				padding-top:20px;
 			}
 			
 			#header-text {
-				font-size:2.1em;
+				font-size: 1.8em;
 				text-align:center;
 				color:white;
 			}
@@ -56,23 +52,25 @@
 			#mobile-header-text {
 				text-align:center;
 				color:white;
-				font-size: 23px;
+				font-size: 1.6rem;
 			}
 				
 			.metro h1 {
-				color:black; 
-				font-size:28px; 
-				text-align:left;
+				color: black; 
+				font-size: 1.5rem; 
+				text-align: left;
+				font-family: "Segoe UI SemiLight","Open Sans Light",sans-serif,serif
 			}
 			
 			#mobile-h1 {
-				color:black; 
-				font-size:28px; 
+				color: rgba(0,0,0,0.8); 
+				font-size: 2.0rem; 
 				text-align:center;
-				margin-bottom: 15px;
+				margin-bottom: 20px;
 			}
 			
 			.metro h2 {
+				font-family: "Segoe UI SemiLight", "Open Sans Light", Verdana, Arial, Helvetica, sans-serif;
 				font-size:18px;
 				margin-bottom: -5px;
 			}
@@ -83,21 +81,21 @@
 			}
 			
 			.metro h3 {
-				font-size:21px;
-				line-height:28px;
-				margin-top: 0px;
+				font-family: "Segoe UI SemiLight", "Open Sans Light", Verdana, Arial, Helvetica, sans-serif;
+				font-size: 1.4rem;
+				line-height:0.8em;
+				margin: 0 0 10px 0;
 			}
 			
 			#mobile-h3 { 
-				font-size:19px; 
+				font-size:1.45rem; 
 				text-align:center;
-				line-height: 4.2rem; 
-				margin-bottom: 3px !important;
+				line-height: 1.8rem; 
+				margin: 5px 0 5px 0 !important;
 			}
 			
 			.metro p {
-				font-family: "Segoe UI Light", "Open Sans Light", Verdana, Arial, Helvetica, sans-serif;
-				font-weight: 300;
+				font-family: "Segoe UI SemiLight", "Open Sans Light", Verdana, Arial, Helvetica, sans-serif;
 				font-size: 17px;
 				line-height: 18pt;
 				letter-spacing: .2px;
@@ -105,35 +103,51 @@
 			
 			#mobile-p {
 				text-align: center;
-				font-size: 14px;
+				font-size: 1.1rem;
+			}
+			
+			#post-desc{
+				font-family: "Segoe UI", "Open Sans", Verdana, Arial, Helvetica, sans-serif;
+				font-style: italic;
+				margin: 0 0 5px 0;
+			}
+
+			#post-excerpt {
+				margin: 0;
+			}
+			
+			#post-desc{
+				font-family: "Segoe UI", "Open Sans", Verdana, Arial, Helvetica, sans-serif;
+				font-style: italic;
 			}
 			
 			.center-image {
-				margin:0 auto 0 auto;
+				margin:0 auto;
 				display: block;
 			}
 			
 			#date-block {
-				padding-top:15px;
-				width: 95px;
-				height: 95px;
+				padding-top:1em;
+				width: 5.5em;
+				height: 5.5em;
 			}
 			
 			#mobile-date-block {
 				width:80px; 
 				height:80px; 
-				padding-top:13px; 
+				padding-top: 20px; 
 				margin:0 auto 0 auto; 
-				display:block""
+				display: block
 			}
 			
 			.date {
 				color: white !important;
 				text-align: center !important;
 				padding:0 0 0 0 !important;
-				font-weight: 500 !important;
-				margin:0 0 4px 0 !important;
-				font-size: 24px !important;
+				font-family: "Segoe UI Light", "Open Sans Light", Verdana, Arial, Helvetica, sans-serif;
+				margin:0 0 0 0 !important;
+				font-size: 1.2rem !important;
+				line-height: 1.2em !important;
 			}
 			
 			.date-mobile {
@@ -141,10 +155,19 @@
 				text-align: center !important;
 				padding:0 0 0 0 !important;
 				font-weight: 500 !important;
-				margin:0 0 -4px 0 !important;
+				margin:0 0 8px 0 !important;
 				font-size: 18px !important;
 			}
-			
+
+			.highlighter-rouge {
+				background-color: #f5f5f5;
+				font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+			}
+
+			.main-content {
+				margin-top: 2.0em;
+			}
+
 			.metro strong {
 				font-weight: normal;
 				font-family: "Segoe UI", "Open Sans Bold", Verdana, Arial, Helvetica, sans-serif;
@@ -152,72 +175,61 @@
 		</style>
 	</head>
 	
-	<!--Deaktop Header-->
+	<!--Desktop Header-->
 	<body class="metro">
-		<section id="header" class="grid no-phone">
+		<section id="header" class="flex-grid no-phone">
 			<div class="container">
 				<h1 id="header-text">Hi! My name is <strong>Jimmy Garrido</strong>.</h1>
-				<h1 id="header-text">I'm a <strong>mobile app developer</strong></h1>
-				<h1 id="header-text">based in <strong>San Francisco, CA</strong>.</h1>
+				<h1 id="header-text">I'm an <strong> app developer</strong> based in <strong>San Francisco</strong>.</h1>
+				<!--<h1 id="header-text">based in <strong>San Francisco, CA</strong>.</h1>-->
 			</div>
 		</section>
 		
 		<!--Mobile Header-->
-		<section id="header-phone" class="grid on-phone no-desktop no-tablet">
+		<section id="header-phone" class="flex-grid on-phone no-pc no-tablet">
 			<div class="container">
-				<h1 id="mobile-header-text">Hi!</h1>
+				<h1 id="mobile-header-text">Hello!</h1>
 				<h1 id="mobile-header-text">My name is <strong>Jimmy Garrido</strong>.</h1>
-				<!--<h1 id="mobile-header-text" style="font-size:19px">I'm a <strong>student</strong> and <strong>developer</strong></h1>-->
 				<h1 id="mobile-header-text">I'm a <strong>mobile app developer</strong></h1>
 				<h1 id="mobile-header-text">based in <strong>San Francisco, CA</strong>.</h1>
 			</div>
 		</section>
 		
 		<!--Desktop Content-->
-		<section class="grid no-phone no-tablet">
-			<div class="container">
-				<div class="grid">
-					<div class="row" style="margin: 20px 0 40px 0">
-						<div class="span8 offset1">
-							<h1>Blog</h1>
-							
-							{{ content }}
-							
-						</div>
-						<div class="span3" style="margin-left:65px">
-							<h1 style="margin-bottom:20px">Find Me Online</h1>
-							<h2>Send me a <a href="mailto:jimmy@nexdev.co" style="color:#0092fa"><strong>message</strong></a>.</h2>
-							<h2>You can <a href="https://www.linkedin.com/pub/jimmy-garrido/74/402/b21" style="color:#0092fa"><strong>connect</strong></a> with me.</h2>
-							<h2>Help me <a href="https://github.com/jimmgarrido" style="color:#0092fa"><strong>code</strong></a> projects.</h2>
-							<h2>Sometimes I <a href="https://twitter.com/jimmgarrido" style="color:#0092fa"><strong>tweet</strong></a> things.</h2>
-							<h2>I take <a href="http://instagram.com/jimmygarrido" style="color:#0092fa"><strong>photos</strong></a> with a Lumia.</h2>
-							<h2>I <a href="https://preserve.io/u/jimmgarr" style="color:#0092fa"><strong>bookmark</strong></a> stuff.</h2>
-						</div>
-					</div>
-					<div class="row">
-						<div class="span8 offset1">
-							<h1>About Me</h1>
-							<div class="row" style="padding-top:10px">
-								<div class="span2">
-									<img src="assets/me.jpg" style="height:95px; border-radius:50%"/>
-								</div>
-								<div class="span5" style="margin-left:-15px">
-									<p>
-										I am currently studying Computer Science at San Francisco State University. I  mostly program in C#, focusing on Xamarin and Windows apps. However, I've also 
-										used Java to build Android apps and some C++.
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
+		<section class="flex-grid no-phone no-tablet main-content">
+			<div class="row flex-just-sa">
+				<div class="cell size6">
+					<h1>Blog</h1>
+					
+					{{ content }}
+					
+				</div>
+				<div class="cell size3">
+					<h1 style="margin-bottom:20px">Find Me Online</h1>
+					<h2>Send me a <a href="mailto:jimmy@nexdev.co" style="color:#0092fa"><strong>message</strong></a>.</h2>
+					<h2>You can <a href="https://www.linkedin.com/pub/jimmy-garrido/74/402/b21" style="color:#0092fa"><strong>connect</strong></a> with me.</h2>
+					<h2>Help me <a href="https://github.com/jimmgarrido" style="color:#0092fa"><strong>code</strong></a> projects.</h2>
+					<h2>Sometimes I <a href="https://twitter.com/jimmgarrido" style="color:#0092fa"><strong>tweet</strong></a> things.</h2>
+					<h2>I take <a href="http://instagram.com/jimmygarrido" style="color:#0092fa"><strong>photos</strong></a> with a Lumia.</h2>
+					<h2>I <a href="https://preserve.io/u/jimmgarr" style="color:#0092fa"><strong>bookmark</strong></a> stuff.</h2>
 				</div>
 			</div>
+			
+			<!--<div class="row flex-just-center" style="margin-top:200px">
+				<div class="cell size6">
+					<img src="assets/me.jpg" class="center-image" style="height:5.5em; border-radius:50%;">
+					<p>
+						I am currently studying Computer Science at San Francisco State University. I  mostly program in C#, focusing on Xamarin and Windows apps. However, I've also 
+						used Java to build Android apps and some C++.
+					</p>
+				</div>
+			</div>-->
 		</section>
 		
 		<!-- Tablet Content -->
-		<section class="grid on-tablet no-phone no-desktop">
+		<section class="flex-grid on-tablet no-phone no-pc">
 			<div class="container">
-				<div class="grid">
+				<div class="flex-grid">
 					<div class="row" style="margin: 20px 0 40px 0">
 						<div class="span7 offset1">
 							<h1>Blog</h1>
@@ -256,8 +268,8 @@
 		</section>
 		
 		<!-- Mobile Content -->
-		<section class="grid on-phone no-desktop no-tablet">
-			<div class="container">
+		<section class="flex-grid on-phone no-pc no-tablet main-content">
+			<div class="row">
 				<div class="grid" style="margin-top:-10px">
 					<div class="row">
 						<div class="span8">

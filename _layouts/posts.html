@@ -23,50 +23,53 @@
 																
 			var color = colors_of_the_rainbow[Math.floor(Math.random() * colors_of_the_rainbow.length)];												
 			
-			$(".navigation-bar").css("background-color", color);			
+			$(".app-bar").css("background-color", color);			
 			}
 			
 			$(function(){
 				RandomColor();
 				
-				$(".navigation-bar").click(RandomColor);
+				$(".app-bar").click(RandomColor);
 			});
 		</script>
 		
 		<style>
+			.metro {
+				font-family: "Segoe UI", "Open Sans Light", Verdana, Arial, Helvetica, sans-serif;
+			}
+
 			.metro h1 {
 				font-family: "Segoe UI Light","Open Sans Light",sans-serif,serif;
-				font-size: 2.5rem;
+				font-size: 2.6rem;
 				text-align: center;
-				margin: 1em 0 1em 0;
+				margin: 0.8em 0 0.5em 0;
 				color: rgba(0,0,0,0.6);
 			}
 			
-			.metro p {
-				color:rgba(0, 0, 0, 0.8);
-				font-size: 0.95rem;
-				line-height: 20pt;
-				letter-spacing:0.30px;
+			.metro h2 {
 				font-family: "Segoe UI SemiLight", "Open Sans Light", Verdana, Arial, Helvetica, sans-serif;
-			}
-			
-			.metro h3 {
-				font-family: "Segoe UI", "Open Sans Light", Verdana, Arial, Helvetica, sans-serif;
-				padding:10px 0 10px 0;
-				font-size: 1.2rem;
-				color: rgba(0, 0, 0, 0.7);				
-			}
-			
-			.metro h4 {
-				font-family: "Segoe UI", "Open Sans", Verdana, Arial, Helvetica, sans-serif;
-				font-size: 1.1rem;
+				padding:10px 0 0 0;
+				font-size: 1.8rem;
 				color: rgba(0, 0, 0, 0.7);
 			}
 			
-			.metro .horizontal-menu {
-				/*text-align:center; 
-				background-color:white;
-				margin-bottom: 40px*/
+			.metro h3 {
+				padding:5px 0 0 0;
+				font-size: 1.4rem;
+				color: rgba(0, 0, 0, 0.8);				
+			}
+			
+			.metro h4 {
+				font-family: "Segoe UI SemiLight", "Open Sans Light", Verdana, Arial, Helvetica, sans-serif;
+				font-size: 1.2rem;
+				color: rgba(0, 0, 0, 0.7);
+			}
+
+			.metro p, li{
+				color:rgba(0, 0, 0, 0.7);
+				font-size: 1.0rem;
+				line-height: 24pt !important;
+				letter-spacing: 0.1pt;
 			}
 
 			.post-content {
@@ -75,11 +78,12 @@
 
 			.highlighter-rouge {
 				background-color: #f5f5f5;
-				font-family: "Segoe UI","Open Sans",sans-serif,serif;
+				font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
 			}
 
 			#signature {
 				text-align: center;
+				margin-bottom: 1.8em;
 			}
 			
 			#home-link {
@@ -88,6 +92,12 @@
 				padding: 0; 
 				color: white;
 			}
+
+			img {
+				width: 45%;
+				max-width: 440px;
+			}
+
 		</style>
 	</head>
 	
@@ -98,49 +108,43 @@
 		</nav>
 		
 		<!--Nav for tablet-->
-		<nav class="navigation-bar on-tablet no-phone no-pc">
-			<nav class="navigation-bar-content">
-				<a href="http://jimmygarrido.co">
-					<div class="element" style="padding-top:10px">
-						<h2 id="home-link">Home</h2>
-					</div>
-				</a>
-			</nav>
+		<nav class="app-bar on-tablet no-phone no-pc">
+			<a class="app-bar-element" href="http://jimmgarr.com"> Home</a>
 		</nav>
 		
 		<!--Nav for mobile-->
-		<nav class="navigation-bar on-phone no-tablet no-pc">
-			<nav class="navigation-bar-content">
-				<a href="http://jimmygarrido.co">
-					<div class="element" style="padding-top:12px">
-						<h2 id="home-link">Home</h2>
-					</div>
-				</a>
-			</nav>
+		<nav class="app-bar on-phone no-tablet no-pc">
+			<a class="app-bar-element" href="http://jimmgarr.com"> Home</a>
 		</nav>
 		
 		<!--Content area for desktop-->
-		<section class="flex-grid no-phone" style="width:900px; margin: 0 auto 2.5em auto">	
-			<h1> {{ page.title }} </h1>
-			<div class="post-content">{{ content }}</div>
-			<h4 id="signature">Jimmy Garrido | {{ page.date | date_to_string }}</h4>
-			</section>
-		</section>
-		
-		<!--Content area for mobile-->
-		<section class="grid on-phone no-tablet no-pc">
-			<div class="container">
-				<div class="grid" style="padding:20px 5px 10px 5px;">	
-					<h1 style="font-size:3.3em; margin-bottom:30px; color:rgba(0, 0, 0, 0.6)"> {{ page.title }} </h1>
-					<h4 style="margin-bottom:30px; color:rgba(0, 0, 0, 0.6)"> {{ page.date | date_to_string }} </h4>
-					{{ content }}
+		<section class="flex-grid no-phone no-tablet">
+			<div class="row flex-just-sa">	
+				<div class="cell size8">
+					<h1> {{ page.title }} </h1>
+					<h4 id="signature">Jimmy Garrido | {{ page.date | date_to_string }}</h4>
+					<div class="post-content">{{ content }}</div>
+					<h4 id="signature">--</h4>
 				</div>
 			</div>
 		</section>
+
+		<!--Content area for tablet-->
+		<section class="flex-grid no-phone no-pc">	
+			
+					<h1> {{ page.title }} </h1>
+					<h4 id="signature">Jimmy Garrido | {{ page.date | date_to_string }}</h4>
+					<div class="post-content">{{ content }}</div>
+					<h4 id="signature">--</h4>
+			
+		</section>
 		
-		<!--Footer for mobile-->
-		<nav class="horizontal-menu compact on-phone no-pc no-tablet" style="text-align:center; background-color:white; margin-bottom: 40px">
-			<p>-- Jimmy Garrido</p>
-		</nav>
+		<!--Content area for mobile-->
+		<section class="flex-grid on-phone no-tablet no-pc">			
+			<h1> {{ page.title }} </h1>
+			<h4 id="signature">Jimmy Garrido | {{ page.date | date_to_string }}</h4>
+			<div class="post-content">{{ content }}</div>
+			<h4 id="signature">--</h4>	
+		</section>
 	</body>
 </html>

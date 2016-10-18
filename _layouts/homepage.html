@@ -41,8 +41,6 @@
 			#header-phone {
 				background-color:#000000;
 				height: 175px;
-				margin-top:-10px;
-				padding-top:20px;
 			}
 			
 			#header-text {
@@ -54,7 +52,7 @@
 			#mobile-header-text {
 				text-align:center;
 				color:white;
-				font-size: 23px;
+				font-size: 1.6rem;
 			}
 				
 			.metro h1 {
@@ -65,10 +63,10 @@
 			}
 			
 			#mobile-h1 {
-				color:black; 
-				font-size:28px; 
+				color: rgba(0,0,0,0.8); 
+				font-size: 2.0rem; 
 				text-align:center;
-				margin-bottom: 15px;
+				margin-bottom: 20px;
 			}
 			
 			.metro h2 {
@@ -85,15 +83,15 @@
 			.metro h3 {
 				font-family: "Segoe UI SemiLight", "Open Sans Light", Verdana, Arial, Helvetica, sans-serif;
 				font-size: 1.4rem;
-				line-height:0.5em;
-				margin-top: 0px;
+				line-height:0.8em;
+				margin: 0 0 10px 0;
 			}
 			
 			#mobile-h3 { 
-				font-size:19px; 
+				font-size:1.45rem; 
 				text-align:center;
-				line-height: 4.2rem; 
-				margin-bottom: 3px !important;
+				line-height: 1.8rem; 
+				margin: 5px 0 5px 0 !important;
 			}
 			
 			.metro p {
@@ -105,16 +103,17 @@
 			
 			#mobile-p {
 				text-align: center;
-				font-size: 14px;
+				font-size: 1.1rem;
 			}
 			
 			#post-desc{
 				font-family: "Segoe UI", "Open Sans", Verdana, Arial, Helvetica, sans-serif;
 				font-style: italic;
+				margin: 0 0 5px 0;
 			}
 
 			#post-excerpt {
-				margin-top: -0.5em;
+				margin: 0;
 			}
 			
 			.center-image {
@@ -131,9 +130,9 @@
 			#mobile-date-block {
 				width:80px; 
 				height:80px; 
-				padding-top:13px; 
+				padding-top: 20px; 
 				margin:0 auto 0 auto; 
-				display:block""
+				display: block
 			}
 			
 			.date {
@@ -151,12 +150,13 @@
 				text-align: center !important;
 				padding:0 0 0 0 !important;
 				font-weight: 500 !important;
-				margin:0 0 -4px 0 !important;
+				margin:0 0 8px 0 !important;
 				font-size: 18px !important;
 			}
-			
-			.post-details {
-				padding-top: 0.2em;
+
+			.highlighter-rouge {
+				background-color: #f5f5f5;
+				font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
 			}
 
 			.main-content {
@@ -209,7 +209,7 @@
 					<h2>I <a href="https://preserve.io/u/jimmgarr" style="color:#0092fa"><strong>bookmark</strong></a> stuff.</h2>
 				</div>
 			</div>
-			<div class="row flex-just-center" style="margin-top:200px">
+			<!--<div class="row flex-just-center" style="margin-top:200px">
 				<div class="cell size6">
 					<img src="assets/me.jpg" class="center-image" style="height:5.5em; border-radius:50%;">
 					<p>
@@ -217,7 +217,7 @@
 						used Java to build Android apps and some C++.
 					</p>
 				</div>
-			</div>
+			</div>-->
 		</section>
 		
 		<!-- Tablet Content -->
@@ -262,8 +262,8 @@
 		</section>
 		
 		<!-- Mobile Content -->
-		<section class="flex-grid on-phone no-pc no-tablet">
-			<div class="container">
+		<section class="flex-grid on-phone no-pc no-tablet main-content">
+			<div class="row">
 				<div class="grid" style="margin-top:-10px">
 					<div class="row">
 						<div class="span8">

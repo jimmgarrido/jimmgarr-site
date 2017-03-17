@@ -4,63 +4,28 @@ layout: homepage
 
 ---
 {% for post in site.posts limit:3 %}
-<!--Blog layout for bigger toys-->
-<div class="row no-phone" style="padding-top:10px; margin-bottom:35px">
-	<div class="cell size2">
-		<div id="date-block">
+<div class="post row cells12 flex-just-center">
+	<div class="cell">
+		<div class="date-block">
 			<h3 class="date">
 				{% assign m = post.date | date: "%B" %} 
 				{% case m %}
-				  {% when 'April' or 'May' or 'June' or 'July' %}{{ m }}
-				  {% when 'September' %}Sept
-				  {% else %}{{ post.date | date: "%b" }}
-				{% endcase %}
-				
+				{% when 'April' or 'May' or 'June' or 'July' %}{{ m }}
+				{% when 'September' %}Sept
+				{% else %}{{ post.date | date: "%b" }}
+				{% endcase %}	
 			</h3>
 			<h3 class="date">
 				{{ post.date | date: "%-d" }}
 			</h3>
 		</div>
 	</div>
-	<div class="cell size10  post-details">
-		<a href="{{ post.url }}">
-			<h3>{{ post.title }}</h3></a>
-			<p id="post-desc">{{ post.description }}</p>
-			<p id="post-excerpt">{{ post.excerpt | remove: '<p>' | remove: '</p>' }}</p>
-	</div>
-</div>
-
-<!--Blog layout for mobile-->
-<div class="row on-phone no-pc no-tablet"  style="margin-bottom:30px">
-	<div class="span2">
-		<div id="mobile-date-block">
-			<h3 class="date-mobile">
-				{% assign m = post.date | date: "%B" %} 
-				{% case m %}
-				  {% when 'April' or 'May' or 'June' or 'July' %}{{ m }}
-				  {% when 'September' %}Sept
-				  {% else %}{{ post.date | date: "%b" }}
-				{% endcase %}
-				
-			</h3>
-			<h3 class="date-mobile">
-				{% assign d = post.date | date: "%-d" %}
-				{% case d %}
-				  {% when '1' or '21' or '31' %}{{ d }}st
-				  {% when '2' or '22' %}{{ d }}nd
-				  {% when '3' or '23' %}{{ d }}rd
-				  {% else %}{{ d }}th
-				{% endcase %}
-			</h3>
+	<div class="cell auto-size">
+		<div class="post-details">
+			<a href="{{ post.url }}">
+				<h3>{{ post.title }}</h3></a>
+				<p id="post-desc">{{ post.description }}</p>
 		</div>
-	</div>
-	<div class="span9">
-		<a href="{{ post.url }}">
-			<h3 id="mobile-h3">{{ post.title }}</h3></a>
-		{% if post.description %}
-		<p id="mobile-p">{{ post.description }}</p>
-		<p id="mobile-p"><a href="{{ post.url }}"><strong> Read More</strong></a></p>
-		{% endif %}
 	</div>
 </div>
 {% endfor %}

@@ -698,8 +698,13 @@
     width: 310px ;
   }
 }
-@media screen and (min-width: 801px) {
-  .no-pc {
+@media screen and (max-width: 320px) {
+  .no-small-phone {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 640px) {
+  .no-phone {
     display: none !important;
   }
 }
@@ -707,26 +712,9 @@
   .no-tablet {
     display: none !important;
   }
-  .on-tablet {
-    display: block !important;
-    visibility: visible !important;
-  }
 }
-@media screen and (max-width: 640px) {
-  .no-phone {
+@media screen and (min-width: 801px) {
+  .no-pc {
     display: none !important;
-  }
-  .on-phone {
-    display: block !important;
-    visibility: visible !important;
-  }
-}
-@media screen and (max-width: 320px) {
-  .no-small-phone {
-    display: none !important;
-  }
-  .on-phone {
-    display: block !important;
-    visibility: visible !important;
   }
 }

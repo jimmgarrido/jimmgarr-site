@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta name="viewport" content="width=device-width,initial-scale=1"></meta>
+		<meta name="viewport" content="width=device-width,initial-scale=1"/>
 		<meta charset="utf-8"></meta>
 		
 		<title>Jimmy Garrido</title>
 
-		<link rel="stylesheet" href="css/metro.css">
-		<link rel="stylesheet" href="css/metro-responsive.css">
-		<link rel="stylesheet" href="css/metro-icons.css">
-		
+		<link href="css/metro.css" rel="stylesheet">
+		<!--<link href="css/metro-responsive.css" rel="stylesheet">-->
 		<script src="js/jquery.min.js"></script>
-		<script src="js/metro.min.js"></script>
+		<script src="js/metro.js"></script>
 		
 		<script type="text/javascript">
 			var RandomColor = function(){
@@ -21,89 +19,46 @@
 																
 			var color = colors_of_the_rainbow[Math.floor(Math.random() * colors_of_the_rainbow.length)];												
 			
-			$("#header, #header-phone, #date-block, #mobile-date-block").css("background-color", color);			
+			$(".header, .date-block, #mobile-date-block").css("background-color", color);			
 			}
 			
 			$(function(){
 				RandomColor();
 				
-				$("#header, #header-phone, #date-block, #mobile-date-block").click(RandomColor);
+				$(".header, #header-phone, .date-block, #mobile-date-block").click(RandomColor);
 			});
 		</script>
 		
 		<style>
-			#header {
+			.header {
 				background-color:#fa6800;
-				height: 125px;
-				padding-top: 10px;
+				padding-top: 15px;
+				padding-bottom: 15px;
+				margin-bottom: 20px;
 			}
-			
-			#header-phone {
-				background-color:#000000;
-				height: 175px;
+
+			.header h1 {
+				font-size: 1.15em !important;
+				text-align:center !important;
+				color:white !important;
 			}
-			
-			#header-text {
-				font-size: 1.8em;
-				text-align:center;
-				color:white;
-			}
-			
-			#mobile-header-text {
-				text-align:center;
-				color:white;
-				font-size: 1.6rem;
-			}
-				
-			.metro h1 {
-				color: black; 
-				font-size: 1.5rem; 
+
+			h2 {
+				color:rgba(0, 0, 0, 0.65); 
+				font-size: 1.7rem; 
 				text-align: left;
+				margin: 1.0rem 0;
 				font-family: "Segoe UI SemiLight","Open Sans Light",sans-serif,serif
 			}
 			
-			#mobile-h1 {
-				color: rgba(0,0,0,0.8); 
-				font-size: 2.0rem; 
-				text-align:center;
-				margin-bottom: 20px;
-			}
-			
-			.metro h2 {
-				font-family: "Segoe UI SemiLight", "Open Sans Light", Verdana, Arial, Helvetica, sans-serif;
-				font-size:18px;
-				margin-bottom: -5px;
-			}
-			
-			#mobile-h2 {
-				font-size:14px;
-				line-height: 25px;
-			}
-			
-			.metro h3 {
-				font-family: "Segoe UI SemiLight", "Open Sans Light", Verdana, Arial, Helvetica, sans-serif;
-				font-size: 1.4rem;
-				line-height:0.8em;
-				margin: 0 0 10px 0;
-			}
-			
-			#mobile-h3 { 
-				font-size:1.45rem; 
-				text-align:center;
-				line-height: 1.8rem; 
-				margin: 5px 0 5px 0 !important;
+			h3 {
+				margin: 0 0 .2em 0;
 			}
 			
 			.metro p {
-				font-family: "Segoe UI SemiLight", "Open Sans Light", Verdana, Arial, Helvetica, sans-serif;
-				font-size: 17px;
+				font-family: "Segoe UI Semilight", "Open Sans Light", Verdana, Arial, Helvetica, sans-serif;
+				font-size: 16.5px;
 				line-height: 18pt;
-				letter-spacing: .2px;
-			}
-			
-			#mobile-p {
-				text-align: center;
-				font-size: 1.1rem;
 			}
 			
 			#post-desc{
@@ -124,188 +79,128 @@
 			.center-image {
 				margin:0 auto;
 				display: block;
+				width:6em; 
+				max-width: none;
+				border-radius:50%;
 			}
 			
-			#date-block {
-				padding-top:1em;
-				width: 5.5em;
-				height: 5.5em;
+			.date-block {
+				padding: 9px;
+				margin-right: 1.0em;
+				width: 5.2em;
+				height: 5.2em;
 			}
-			
-			#mobile-date-block {
-				width:80px; 
-				height:80px; 
-				padding-top: 20px; 
-				margin:0 auto 0 auto; 
-				display: block
+
+			.post-details {
+				margin-left: 0.7em;
 			}
 			
 			.date {
-				color: white !important;
-				text-align: center !important;
-				padding:0 0 0 0 !important;
-				font-family: "Segoe UI Light", "Open Sans Light", Verdana, Arial, Helvetica, sans-serif;
-				margin:0 0 0 0 !important;
-				font-size: 1.2rem !important;
-				line-height: 1.2em !important;
+				color: white;
+				text-align: center;
+				line-height: 1.2rem;
+				font-size: 1.3rem;
+				margin: 0.3rem 0;
 			}
 			
-			.date-mobile {
-				color: white !important;
-				text-align: center !important;
-				padding:0 0 0 0 !important;
-				font-weight: 500 !important;
-				margin:0 0 8px 0 !important;
-				font-size: 18px !important;
-			}
-
 			.highlighter-rouge {
 				background-color: #f5f5f5;
 				font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
-			}
-
-			.main-content {
-				margin-top: 2.0em;
 			}
 
 			.metro strong {
 				font-weight: normal;
 				font-family: "Segoe UI", "Open Sans Bold", Verdana, Arial, Helvetica, sans-serif;
 			}
+
+			.post {
+				margin-top: 30px;
+				margin-bottom: 40px;
+			}
+
+			.about-text {
+				margin: 0 25px;
+			}
+			
 		</style>
 	</head>
 	
-	<!--Desktop Header-->
 	<body class="metro">
-		<section id="header" class="flex-grid no-phone">
-			<div class="container">
-				<h1 id="header-text">Hi! My name is <strong>Jimmy Garrido</strong>.</h1>
-				<h1 id="header-text">I'm an <strong> app developer</strong> based in <strong>San Francisco</strong>.</h1>
-				<!--<h1 id="header-text">based in <strong>San Francisco, CA</strong>.</h1>-->
-			</div>
-		</section>
-		
-		<!--Mobile Header-->
-		<section id="header-phone" class="flex-grid on-phone no-pc no-tablet">
-			<div class="container">
-				<h1 id="mobile-header-text">Hello!</h1>
-				<h1 id="mobile-header-text">My name is <strong>Jimmy Garrido</strong>.</h1>
-				<h1 id="mobile-header-text">I'm a <strong>mobile app developer</strong></h1>
-				<h1 id="mobile-header-text">based in <strong>San Francisco, CA</strong>.</h1>
-			</div>
-		</section>
-		
-		<!--Desktop Content-->
-		<section class="flex-grid no-phone no-tablet main-content">
-			<div class="row flex-just-sa">
-				<div class="cell size6">
-					<h1>Blog</h1>
-					
-					{{ content }}
-					
+		<section class="flex-grid">
+
+			<!--Header-->
+			<div class="header row cells12 flex-just-center">
+				<div class="cell colspan6">
+					<h1>Hello there!</h1>
 				</div>
-				<div class="cell size3">
-					<h1 style="margin-bottom:20px">Find Me Online</h1>
-					<h2>Send me a <a href="mailto:jimmy@nexdev.co" style="color:#0092fa"><strong>message</strong></a>.</h2>
-					<h2>You can <a href="https://www.linkedin.com/pub/jimmy-garrido/74/402/b21" style="color:#0092fa"><strong>connect</strong></a> with me.</h2>
-					<h2>Help me <a href="https://github.com/jimmgarrido" style="color:#0092fa"><strong>code</strong></a> projects.</h2>
-					<h2>Sometimes I <a href="https://twitter.com/jimmgarrido" style="color:#0092fa"><strong>tweet</strong></a> things.</h2>
-					<h2>I take <a href="http://instagram.com/jimmygarrido" style="color:#0092fa"><strong>photos</strong></a> with a Lumia.</h2>
-					<h2>I <a href="https://preserve.io/u/jimmgarr" style="color:#0092fa"><strong>bookmark</strong></a> stuff.</h2>
+			</div>	
+		
+
+			<!--Blog-->
+			<div class="row cells12 flex-just-center" style="margin-bottom: 50px">
+				<div class="cell colspan6">
+					<h2>Latest posts</h2>				
+						{{ content }}
 				</div>
 			</div>
-			
-			<!--<div class="row flex-just-center" style="margin-top:200px">
-				<div class="cell size6">
-					<img src="assets/me.jpg" class="center-image" style="height:5.5em; border-radius:50%;">
-					<p>
-						I am currently studying Computer Science at San Francisco State University. I  mostly program in C#, focusing on Xamarin and Windows apps. However, I've also 
-						used Java to build Android apps and some C++.
-					</p>
+
+			<!--About-->
+			<!--<div class="row cells12 flex-just-center">
+				 <div class="cell colspan6">
+					<div class="row cells3 flex-just-center cell-auto-size">
+						<div class="cell">
+							<p class="about-text"> Currently at 
+								<a href="https://www.linkedin.com/pub/jimmy-garrido/74/402/b21" style="color:#0092fa">
+								<strong>Microsoft.</strong></a>
+								I focus on mobile app development with Xamarin and UWP.</p>
+						</div>
+						<div class="cell">
+							<img src="assets/me.jpg" class="center-image"/>
+						</div>
+						<div class="cell">
+							<p class="about-text"> Check out my projects on 
+								<a href="https://github.com/jimmgarrido" style="color:#0092fa">
+								<strong>GitHub.</strong></a>,
+								follow me on
+								<a href="https://twitter.com/jimmgarrido" style="color:#0092fa">
+								<strong>Twitter,</strong></a>
+								or
+								<a href="mailto:jimmy@nexdev.co" style="color:#0092fa">
+								<strong>email</strong></a>
+								me.
+								</p>
+						</div>
+					</div>
 				</div>
 			</div>-->
-		</section>
-		
-		<!-- Tablet Content -->
-		<section class="flex-grid on-tablet no-phone no-pc">
-			<div class="container">
-				<div class="flex-grid">
-					<div class="row" style="margin: 20px 0 40px 0">
-						<div class="span7 offset1">
-							<h1>Blog</h1>
+
+			<div class="row cells12 flex-just-center">
+				 <div class="cell colspan6">
+					 <h2>About Me</h2>
+					<div class="row cells6">
+						<div class="cell">
+							<img src="assets/me.jpg" class="center-image"/>
+						</div>
+						<div class="cell auto-size">
+							<p class="about-text">Hey there! My name is Jimmy Garrido.</p>
 							
-							{{ content }}
-							
+							<p class="about-text">I focus on mobile app development with Xamarin and UWP.</p>
+
+							<p class="about-text"> Check out my 
+								<a href="https://github.com/jimmgarrido" style="color:#0092fa">
+								<strong>GitHub</strong></a>,
+								follow me on
+								<a href="https://twitter.com/jimmgarrido" style="color:#0092fa">
+								<strong>Twitter</strong></a>,
+								or
+								<a href="mailto:jimmy@nexdev.co" style="color:#0092fa">
+								<strong>email</strong></a>
+								me.
+								</p>
 						</div>
 					</div>
-					<div class="row" style="margin: 0 0 40px 0">
-						<div class="span7 offset1">
-							<h1>About Me</h1>
-							<div class="row" style="padding-top:10px">
-								<div class="span2">
-									<img src="assets/me.jpg" style="height:95px; border-radius:50%"/>
-								</div>
-								<div class="span5" style="margin-left:-15px">
-									<p>
-										I am currently studying Computer Science at San Francisco State University. I  mostly program in C#, focusing on Xamarin and Windows apps. However, I've also 
-										used Java to build Android apps and some C++.</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="row" style="margin: 60px 0 0 0">
-						<div class="span7 offset1">
-							<h1 style="margin-bottom:20px">Find Me Online</h1>
-							<h2>You can send me an <a href="mailto:jimmy@nexdev.co" style="color:#0092fa"><strong>email</strong></a>
-							or <a href="https://www.linkedin.com/pub/jimmy-garrido/74/402/b21" style="color:#0092fa"><strong>connect</strong></a> 
-							with me. I'm also on <a href="https://github.com/jimmgarrido" style="color:#0092fa"><strong>GitHub</strong></a>,
-							<a href="https://twitter.com/jimmgarrido" style="color:#0092fa"><strong>Twitter</strong></a>, and
-							<a href="http://instagram.com/jimmygarrido" style="color:#0092fa"><strong>Instagram</strong></a>.</h2>
-						</div>
-					</div>
-				</div>
+				 </div>
 			</div>
-		</section>
-		
-		<!-- Mobile Content -->
-		<section class="flex-grid on-phone no-pc no-tablet main-content">
-			<div class="row">
-				<div class="grid" style="margin-top:-10px">
-					<div class="row">
-						<div class="span8">
-							<h1 id="mobile-h1">Blog</h1>
-							
-								{{ content }}
-							
-						</div>
-					</div>
-					<div class="row">
-						<div class="span8">
-							<h1 id="mobile-h1">About Me</h1>
-							<div class="row" style="padding-top:5px; margin-bottom:30px">
-								<div class="span3">
-									<img src="assets/me.jpg" class="center-image" style="height:80px; border-radius:50%"/>
-								</div>
-								<div class="span5" style="margin-left:-10px; padding: 0 8px 0 8px;">
-									<p id="mobile-p">
-										I am currently studying Computer Science at San Francisco State University. I  mostly program in C#, focusing on Xamarin and Windows apps. However, I've also 
-										used Java to build Android apps and some C++.</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="span4" style="text-align:center; padding-bottom:15px">
-							<h1 id="mobile-h1">Find Me Online</h1>
-							<h2 id="mobile-h2">You can send me an <a href="mailto:jimmy@nexdev.co" style="color:#0092fa"><strong>email</strong></a>
-												or <a href="https://www.linkedin.com/pub/jimmy-garrido/74/402/b21" style="color:#0092fa"><strong>connect</strong></a> 
-												 with me. I'm also on <a href="https://github.com/jimmgarrido" style="color:#0092fa"><strong>GitHub</strong></a>,
-												  <a href="https://twitter.com/jimmgarrido" style="color:#0092fa"><strong>Twitter</strong></a>, and
-												   <a href="http://instagram.com/jimmygarrido" style="color:#0092fa"><strong>Instagram</strong></a>.</h2>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+		</section>	
 	</body>
 </html>

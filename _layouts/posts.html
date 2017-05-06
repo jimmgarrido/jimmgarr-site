@@ -6,11 +6,9 @@
 		
 		<title>{{ page.title }}</title>
 
-		<link rel="stylesheet" href="../../../css/metro.css">
-		<link rel="stylesheet" href="../../../css/monokai.css">
-		<script src="../../../js/jquery.min.js"></script>
-		<link href="../../../css/metro-responsive.css" rel="stylesheet">
-		<!--<script src="../../../js/metro.min.js"></script>-->
+		<link rel="stylesheet" href="/css/bootstrap.css">
+		<link rel="stylesheet" href="/css/monokai.css">
+		<script src="/js/jquery.min.js"></script>
 		
 		<script type="text/javascript">
 			var RandomColor = function(){
@@ -27,52 +25,75 @@
 		</script>
 		
 		<style>
-			.metro {
+			body {
 				font-family: "Segoe UI", "Open Sans", Verdana, Arial, Helvetica, sans-serif;
 			}
 
-			.metro h1 {
+			h1 {
 				font-family: "Segoe UI Light","Open Sans Light",sans-serif,serif;
-				font-size: 2.5rem;
+				font-size: 3.2em;
+				font-weight: 400;
 				text-align: center;
-				margin: 1.0rem 0;
+				margin: 0.8em 0 0.3em 0;
 				color: rgba(0,0,0,0.7);
 			}
 			
-			.metro h2 {
+			h2 {
 				font-family: "Segoe UI SemiLight", "Open Sans Light", Verdana, Arial, Helvetica, sans-serif;
 				color: rgba(0, 0, 0, 0.65);
 				margin: 2.1rem 0 1.2rem 0;
 			}
 			
-			.metro h3 {
+			h3 {
 				margin: 1.5rem 0 0.6rem 0;
-				font-size: 1.4rem;
 				color: rgba(0, 0, 0, 0.8);				
 			}
 			
-			.metro h4 {
+			h4 {
 				font-family: "Segoe UI SemiLight", "Open Sans Light", Verdana, Arial, Helvetica, sans-serif;
-				font-size: 1.2rem;
 				color: rgba(0, 0, 0, 0.7);
 			}
 
-			.metro ul, ol {
+			ul, ol, li {
 				margin: 0;
 			}
 
-			.metro p, li{
+			li {
 				color:rgba(0, 0, 0, 0.7);
-				font-size: 0.95rem;
-				line-height: 1.6 !important;
+				font-size: 18px;
+				line-height: 1.6em;
 			}
 
-			.metro app-bar-divider {
-				background-color: white;
+			p {
+				color:rgba(0, 0, 0, 0.7);
+				font-size: 18px;
+				line-height: 1.6em;
+				margin: 20px 0;
+			}
+
+			pre {
+				border: none;
+				font-size: 1.05em;
+				margin: 10px 0;
+			}
+
+			.nav > li > a:hover, 
+			.nav > li > a:focus {
+				background-color: #005696;
+			}
+
+			.nav > li > a {
+				color: white;
+			}
+
+			.navbar {
+				background-color: #0072c6;
+				border-radius: 0;
+				border: none;
 			}
 
 			.content {
-				padding: 0 10px;
+				margin: 30px 0;
 			}
 
 			.highlighter-rouge {
@@ -92,7 +113,7 @@
 			#date {
 				text-align: center;
 				margin: 1.0rem 0;
-				font-size: 1.2rem;
+				font-size: 1.6em;
 				color: rgba(0, 0, 0, 0.6)
 			}
 			
@@ -104,7 +125,8 @@
 			}
 
 			img {
-				max-height: 25rem;
+				max-height: 30em;
+				max-width: 100%;
 				margin:0 auto;
 				display: block;
 			}
@@ -131,10 +153,6 @@
 				margin: 0;
 			}
 
-			.app-bar {
-				margin-bottom: 1.0rem;
-			}
-
 			.image-wrapper {
     			text-align: center;
     		}
@@ -142,41 +160,40 @@
 			.image-caption {
 				color: rgba(0, 0, 0, 0.7);
 				margin-top: 1.0rem;
-				font-size: 0.8rem !important;
+				font-size: 1.1em;
 				font-style: italic;
 			}
 
 		</style>
 	</head>
 	
-	<body class="metro">
-		<section class="flex-grid">
-			<!--Nav-->
-			<div class="row cells12 flex-just-center">
-				<div class="cell colspan12">
-					<nav class="app-bar">
-						<a class="app-bar-element" href="http://jimmgarr.com"> Jimmy Garrido</a>
-						<a class="app-bar-element place-right" href="http://jimmgarr.com">Blog Posts</a>
-					</nav>
-				</div>
+	<body class="container-fluid">
+		<!--Nav-->
+		<nav class="row navbar">
+			<ul class="nav navbar-nav">
+				<li><a href="http://jimmgarr.com"> Jimmy Garrido</a></li>
+			</ul>
+		</nav>
+	
+	
+		<!--Content-->
+		<div class="row">
+			<div class="col-md-3 col-xs-1"></div>	
+			<div class="col-md-6 col-xs-10">
+				<h1> {{ page.title }} </h1>
+				<h4 id="date">{{ page.date | date_to_string }}</h4>
 			</div>
-		
-		
-			<!--Content-->
-			<div class="row cells12 flex-just-center">	
-				<div class="cell colspan6">
-					<h1> {{ page.title }} </h1>
-					<h4 id="date">{{ page.date | date_to_string }}</h4>
-				</div>
-			</div>
-			<div class="content row cells12 flex-just-center">
-				<div class="cell colspan8">
+			<div class="col-md-3 col-xs-1"></div>
+		</div>
+		<div class="content row">
+			<div class="col-md-2 col-xs-0"></div>
+			<div class="col-md-8 col-xs-12">
 
-					{{ content }}
+				{{ content }}
 
-				<h4 id="signature">--</h4>
-				</div>
+			<h4 id="signature">--</h4>
 			</div>
-		</section>
+			<div class="col-md-2 col-xs-0"></div>
+		</div>
 	</body>
 </html>

@@ -4,12 +4,12 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1"/>
 		<meta charset="utf-8"></meta>
 		
-		<title>Jimmy Garrido</title>
+		<title>Home | Jimmy Garrido</title>
 
-		<link href="css/metro.css" rel="stylesheet">
-		<!--<link href="css/metro-responsive.css" rel="stylesheet">-->
+		<link href="css/bootstrap.css" rel="stylesheet">
+		<link href="css/metro-icons.min.css" rel="stylesheet">
 		<script src="js/jquery.min.js"></script>
-		<script src="js/metro.js"></script>
+		<script src="js/bootstrap.js"></script>
 		
 		<script type="text/javascript">
 			var RandomColor = function(){
@@ -19,7 +19,8 @@
 																
 			var color = colors_of_the_rainbow[Math.floor(Math.random() * colors_of_the_rainbow.length)];												
 			
-			$(".header, .date-block, #mobile-date-block").css("background-color", color);			
+			$(".header, .date-block, #mobile-date-block").css("background-color", color);	
+			$(".icon").css("color", color);		
 			}
 			
 			$(function(){
@@ -30,35 +31,37 @@
 		</script>
 		
 		<style>
+			body {
+				font-family: "Segoe UI", "Helvetica Neue",Helvetica, "Open Sans", Arial,sans-serif
+			}
+
 			.header {
 				background-color:#fa6800;
 				padding-top: 15px;
 				padding-bottom: 15px;
 				margin-bottom: 20px;
-			}
-
-			.header h1 {
-				font-size: 1.15em !important;
-				text-align:center !important;
-				color:white !important;
+				text-align:center;
+				color:white;
+				height: 50px;
 			}
 
 			h2 {
 				color:rgba(0, 0, 0, 0.65); 
-				font-size: 1.7rem; 
-				text-align: left;
-				margin: 1.0rem 0;
 				font-family: "Segoe UI SemiLight","Open Sans Light",sans-serif,serif
 			}
 			
 			h3 {
-				margin: 0 0 .2em 0;
+				margin: 0 0 .05em 0;
+			}
+
+			h3 small {
+				font-size: 18px;
+				color: rgb(95, 95, 95);
 			}
 			
-			.metro p {
-				font-family: "Segoe UI Semilight", "Open Sans Light", Verdana, Arial, Helvetica, sans-serif;
-				font-size: 16.5px;
-				line-height: 18pt;
+			p {
+				font-family: "Segoe UI", "Open Sans Light", Verdana, Arial, Helvetica, sans-serif;
+				font-size: 18px;
 			}
 			
 			#post-desc{
@@ -79,14 +82,13 @@
 			.center-image {
 				margin:0 auto;
 				display: block;
-				width:6em; 
-				max-width: none;
+				width: 5.2em; 
+				max-width: 85px;
 				border-radius:50%;
 			}
 			
 			.date-block {
 				padding: 9px;
-				margin-right: 1.0em;
 				width: 5.2em;
 				height: 5.2em;
 			}
@@ -98,8 +100,7 @@
 			.date {
 				color: white;
 				text-align: center;
-				line-height: 1.2rem;
-				font-size: 1.3rem;
+				font-size: 20px;
 				margin: 0.3rem 0;
 			}
 			
@@ -118,74 +119,73 @@
 				margin-bottom: 40px;
 			}
 
+			.pic {
+				margin-top: 25px;
+			}
+			.post .col-lg-1,
+			.pic .col-lg-1 {
+				width: 85px;
+			}
+
+			.about {
+				margin-top: 30px;
+			}
+
 			.about-text {
-				margin: 0 25px;
+				color: rgb(95, 95, 95);
+				margin: 0 0 5px 0.7em;
+			}
+
+			.icon {
+				margin-right: 20px;
+				font-size: 32px;
+			}
+
+			.social-links {
+				margin-top: -10px;
+			}
+
+			.social-links a:hover, 
+			a:focus {
+				text-decoration: none;
 			}
 			
 		</style>
 	</head>
 	
-	<body class="metro">
-		<section class="flex-grid">
-
+	<body>
+		<div class="container-fluid">
 			<!--Header-->
-			<div class="header row cells12 flex-just-center">
-				<div class="cell colspan6">
-					<h1>Hello there!</h1>
-				</div>
-			</div>	
+			<div class="header row">
+				<!--<div class="col-md-3 col-xs-2"></div>
+				<div class="col-md-6 col-xs-8">-->
+					<!--<h1>Hello there!</h1>-->
+				<!--</div>
+				<div class="col-md-3 col-xs-2"></div>-->
+			</div>
 		
-
 			<!--Blog-->
-			<div class="row cells12 flex-just-center" style="margin-bottom: 50px">
-				<div class="cell colspan6">
+			<div class="row">
+				<div class="col-xs-1 col-sm-2 col-md-2 col-lg-3"></div>
+				<div class="col-xs-10 col-sm-8 col-md-8 col-lg-6">
 					<h2>Latest posts</h2>				
 						{{ content }}
 				</div>
+				<div class="col-xs-1 col-sm-2 col-md-2 col-lg-3"></div>
 			</div>
 
 			<!--About-->
-			<!--<div class="row cells12 flex-just-center">
-				 <div class="cell colspan6">
-					<div class="row cells3 flex-just-center cell-auto-size">
-						<div class="cell">
-							<p class="about-text"> Currently at 
-								<a href="https://www.linkedin.com/pub/jimmy-garrido/74/402/b21" style="color:#0092fa">
-								<strong>Microsoft.</strong></a>
-								I focus on mobile app development with Xamarin and UWP.</p>
-						</div>
-						<div class="cell">
+			<div class="about row">
+				<div class="col-xs-1 col-sm-2 col-md-2 col-lg-3"></div>
+				<div class="col-xs-10 col-sm-8 col-md-8 col-lg-6">
+					<h2>About Me</h2>
+					<div class="pic row">
+						<div class="col-xs-1 col-lg-1">
 							<img src="assets/me.jpg" class="center-image"/>
 						</div>
-						<div class="cell">
-							<p class="about-text"> Check out my projects on 
-								<a href="https://github.com/jimmgarrido" style="color:#0092fa">
-								<strong>GitHub.</strong></a>,
-								follow me on
-								<a href="https://twitter.com/jimmgarrido" style="color:#0092fa">
-								<strong>Twitter,</strong></a>
-								or
-								<a href="mailto:jimmy@nexdev.co" style="color:#0092fa">
-								<strong>email</strong></a>
-								me.
-								</p>
-						</div>
-					</div>
-				</div>
-			</div>-->
-
-			<div class="row cells12 flex-just-center">
-				 <div class="cell colspan6">
-					 <h2>About Me</h2>
-					<div class="row cells6">
-						<div class="cell">
-							<img src="assets/me.jpg" class="center-image"/>
-						</div>
-						<div class="cell auto-size">
-							<p class="about-text">Hey there! My name is Jimmy Garrido.</p>
-							
-							<p class="about-text">I focus on mobile app development with Xamarin and UWP.</p>
-
+						<div class="col-sm-8 col-md-10 hidden-xs">
+							<p class="about-text">Hello! My name is Jimmy Garrido.</p>							
+							<p class="about-text"> I focus on mobile app development with Xamarin and UWP.</p>
 							<p class="about-text"> Check out my 
 								<a href="https://github.com/jimmgarrido" style="color:#0092fa">
 								<strong>GitHub</strong></a>,
@@ -198,9 +198,25 @@
 								me.
 								</p>
 						</div>
+						<div class="about-text col-xs-8 visible-xs">
+							<p>Hello! My name is Garrido. I focus on mobile app 
+								development with Xamarin and UWP.</p>
+							<p class="social-links"> 
+								<a class="icon" href="https://github.com/jimmgarrido">
+									<span class="mif-github"></span>
+								</a>
+								<a class="icon" href="https://twitter.com/jimmgarrido">
+									<span class="mif-twitter"></span>
+								</a>
+								<a class="icon" href="https://www.linkedin.com/in/jimmy-garrido-b2140274/">
+									<span class="mif-linkedin"></span>
+								</a>	
+							</p>
+						</div>
 					</div>
-				 </div>
+				</div>
+				<div class="col-xs-1 col-sm-2 col-md-2 col-lg-3"></div>
 			</div>
-		</section>	
+		</div>
 	</body>
 </html>

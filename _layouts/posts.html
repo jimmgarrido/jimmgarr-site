@@ -32,7 +32,7 @@
 
 			h1 {
 				font-family: -apple-system, BlinkMacSystemFont, "Segoe UI SemiLight", "Roboto", Helvetica, sans-serif;
-				font-size: 40px;
+				font-size: 38px;
 				font-weight: 300;
 				text-align: center;
 				margin: 25px 0 10px 0;
@@ -93,7 +93,7 @@
 			}
 
 			.content {
-				margin: 30px 0;
+				margin: 20px 0;
 			}
 
 			.highlighter-rouge {
@@ -181,22 +181,22 @@
 	
 		<!--Content-->
 		<div class="row">
-			<div class="col-md-3 col-xs-1"></div>	
-			<div class="col-md-6 col-xs-10">
+			<div class="col-xs-1"></div>	
+			<div class="col-xs-10">
 				<h1> {{ page.title }} </h1>
 				<h4 id="date">{{ page.date | date_to_string }}</h4>
 			</div>
-			<div class="col-md-3 col-xs-1"></div>
+			<div class="col-xs-1"></div>
 		</div>
 		<div class="content row">
-			<div class="col-md-2 col-xs-0"></div>
-			<div class="col-md-8 col-xs-12">
+			<div class="hidden-xs col-sm-1 col-lg-2"></div>
+			<div class="col-xs-12 col-sm-10 col-lg-8">
 
 				{{ content }}
 
 			<h4 id="signature">--</h4>
 			</div>
-			<div class="col-md-2 col-xs-0"></div>
+			<div class="hidden-xs col-sm-1 col-lg-2"></div>
 		</div>
 	</body>
 </html>

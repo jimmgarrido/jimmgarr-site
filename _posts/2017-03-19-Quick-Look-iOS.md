@@ -51,7 +51,7 @@ public class InteractionDelegate : UIDocumentInteractionControllerDelegate
 }
 {% endhighlight %}
 
-When you are ready to present a preview, create a new document interaction controller with the static `UIDocumentInteractionController.FromUrl` method by passing it a path to the file. Then assign the delegate and present the controller with `PresentPreview`:
+When you are ready to present a preview, create a new document interaction controller with the static `FromUrl` method inside `UIDocumentInteractionController`. by passing it a path to the file. Then assign the delegate and present the controller with `PresentPreview`:
 
 {% highlight csharp linenos %}
 var previewController = UIDocumentInteractionController.FromUrl(

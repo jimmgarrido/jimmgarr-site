@@ -13,6 +13,9 @@ img {
 pre {
     overflow-x: auto;
     overflow: auto;
+    border: none;
+    font-size: 1.05em;
+    margin: 10px 0;
 }
 
 tr {
@@ -25,17 +28,6 @@ table {
 
 .highlight {
     margin: 0;
-}
-
-.image-wrapper {
-    text-align: center;
-}
-
-.image-caption {
-    color: rgba(0, 0, 0, 0.7);
-    margin-top: 1.0rem;
-    font-size: 1.1em;
-    font-style: italic;
 }
 
 .highlighter-rouge {

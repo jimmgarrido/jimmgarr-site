@@ -1,6 +1,6 @@
 ---
 
-layout: homepage
+layout: home
 
 ---
 {% for post in site.posts limit:3 %}
@@ -24,7 +24,7 @@ layout: homepage
 		<div class="post-details">
 			<a href="{{ post.url }}">
 				<h3>{{ post.title }}</h3></a>
-				<h3><small>{{ post.description }}</small></h3>
+				{{ content }}
 		</div>
 	</div>
 </div>

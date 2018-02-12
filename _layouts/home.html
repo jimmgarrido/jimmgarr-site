@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"></meta>
+	<meta charset="utf-8"></meta>
+
+	<title>Home | Jimmy Garrido</title>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+
+	<link rel="stylesheet" href="css/bootstrap.css" >
+	<link rel="stylesheet" href="css/monokai.css">
+	<link rel="stylesheet" href="css/home.css">
+	<link rel="stylesheet" href="css/code.css">
+
+	<script type="text/javascript">
+		var RandomColor = function () {
+			colors_of_the_rainbow = ["#A4C400", "#60A917", "#008A00", "#00ABA9", "#1BA1E2", "#0050EF",
+				"#6A00FF", "#AA00FF", "#D80073", "#A20025", "#E51400", "#FA6800",
+				"#F0A30A", "#76608A"];
+
+			var color = colors_of_the_rainbow[Math.floor(Math.random() * colors_of_the_rainbow.length)];
+
+			$(".top-bar, .date-block, #mobile-date-block").css("background-color", color);
+			$(".icon").css("color", color);
+		}
+
+		$(function () {
+			RandomColor();
+
+			$(".top-bar, #top-bar-phone, .date-block, #mobile-date-block").click(RandomColor);
+		});
+	</script>
+</head>
+
+<body>
+	<!--Top-bar-->
+	<div class="top-bar row no-gutters"></div>
+
+	<!--Content-->
+	<div class="container">
+		<!--Header-->
+		<div class="row justify-content-center">
+			<div class="col-1">
+				<h3>Blog</h3>
+			</div>
+			<div class="col-1">
+				<h3>Photos</h3>
+			</div>
+		</div>
+
+		<!--Blog-->
+		<div class="row justify-content-center">
+			<div class="col-xs-10 col-sm-8 col-md-8 col-lg-10">
+				<h2>Latest</h2>
+				{{ content }}
+			</div>
+
+			<!--About-->
+			<!-- <div class="col-xs-2 col-sm-4 col-md-4 col-lg-3">
+				<h2>About Me</h2>
+				<div class="pic row">
+					<div class="col-9 offset-2">
+						<p class="about-text">Hello! My name is Jimmy Garrido.</p>
+						<p class="about-text"> I focus on mobile app development with Xamarin and UWP.</p>
+						<p class="about-text"> Check out my
+							<a href="https://github.com/jimmgarrido" style="color:#0092fa">
+								<strong>GitHub</strong>
+							</a>, follow me on
+							<a href="https://twitter.com/jimmgarrido" style="color:#0092fa">
+								<strong>Twitter</strong>
+							</a>, or
+							<a href="mailto:jimmy@nexdev.co" style="color:#0092fa">
+								<strong>email</strong>
+							</a>
+							me.
+						</p>
+					</div>
+					<div class="mobile-social-links about-text col-xs-8 visible-xs">
+						<p>Hello! My name is Jimmy Garrido. I focus on mobile app development with Xamarin and UWP.</p>
+						<p>
+							<a class="icon" href="https://github.com/jimmgarrido">
+								<span class="mif-github"></span>
+							</a>
+							<a class="icon" href="https://twitter.com/jimmgarrido">
+								<span class="mif-twitter"></span>
+							</a>
+							<a class="icon" href="https://www.linkedin.com/in/jimmy-garrido-b2140274/">
+								<span class="mif-linkedin"></span>
+							</a>
+						</p>
+					</div>
+				</div>
+			</div> -->
+		</div>
+	</div>
+</body>
+
+</html>

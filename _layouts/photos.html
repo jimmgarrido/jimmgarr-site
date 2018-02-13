@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"></meta>
+    <meta charset="utf-8"></meta>
+
+    <title>Photos | Jimmy Garrido</title>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/monokai.css">
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/code.css">
+    <link rel="stylesheet" href="/css/post.css">
+
+    <script type="text/javascript">
+        var RandomColor = function () {
+            colors_of_the_rainbow = ["#A4C400", "#60A917", "#008A00", "#00ABA9", "#1BA1E2", "#0050EF",
+                "#6A00FF", "#AA00FF", "#D80073", "#A20025", "#E51400", "#FA6800",
+                "#F0A30A", "#76608A"];
+
+            var color = colors_of_the_rainbow[Math.floor(Math.random() * colors_of_the_rainbow.length)];
+
+            $(".top-bar, .date-block, #mobile-date-block").css("background-color", color);
+            $(".icon, .selected-header").css("color", color);
+        }
+
+        $(function () {
+            RandomColor();
+            $(".top-bar, .selected-header a, #top-bar-phone, .date-block, #mobile-date-block").click(RandomColor);
+        });
+    </script>
+</head>
+
+<body>
+    {{ content }}
+</body>
+
+</html>

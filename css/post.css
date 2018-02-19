@@ -34,6 +34,10 @@ p {
     margin: 20px 0;
 }
 
+.nav>li>a {
+    color: white;
+}
+
 .image-wrapper {
     text-align: center;
 }

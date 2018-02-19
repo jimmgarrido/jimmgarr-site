@@ -1,9 +1,18 @@
 ---
-layout: photos
+layout: photospage
 ---
 
-{% for post in site.tags.photos limit:3 %}
-<div class="row post">
+{% for post in site.tags.photos %}
+<div class="row">
+	<div class="col-4">
+		<div class="card hover-container">
+			<img class="card-img-top" src="https://jimmgarr.blob.core.windows.net/images/DSC_0271.jpg">
+			<a href="{{ post.url }}"><div class="overlay">
+				<h2 class="hover-text">Seattle, WA</h2>
+			</div></a>
+	</div>
+</div>
+<!-- <div class="row post">
 	<div class="col-xs-1 col-md-1">
 		<div class="date-block">
 			<h3 class="date">
@@ -26,5 +35,5 @@ layout: photos
 				{{ post.content }}
 		</div>
 	</div>
-</div>
+</div> -->
 {% endfor %}

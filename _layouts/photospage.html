@@ -7,8 +7,8 @@
 
     <title>Photos | Jimmy Garrido</title>
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.js"></script>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.js"></script>
 
     <link rel="stylesheet" href="/css/bootstrap.css">
     <link rel="stylesheet" href="/css/monokai.css">
@@ -33,9 +33,47 @@
             $(".top-bar, .selected-header a, #top-bar-phone, .date-block, #mobile-date-block").click(RandomColor);
         });
     </script>
+
+    <style>
+        .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            transition: .3s ease;
+            background-color: #000000;
+        }
+    
+        .hover-container:hover .overlay {
+            opacity: .75;
+        }
+    
+        .hover-text {
+            color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            text-align: center;
+            margin: 0;
+        }
+    </style>
 </head>
 
 <body>
+    <div class="top-bar row no-gutters navbar">
+        <ul class="nav navbar-nav hidden-xs">
+            <li>
+                <a href="http://jimmgarr.com">Blog</a>
+            </li>
+        </ul>
+    </div>
+
     {{ content }}
 </body>
 

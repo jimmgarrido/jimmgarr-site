@@ -47,11 +47,11 @@
             transition: .3s ease;
             background-color: #000000;
         }
-    
+
         .hover-container:hover .overlay {
             opacity: .75;
         }
-    
+
         .hover-text {
             color: white;
             position: absolute;
@@ -73,8 +73,11 @@
             </li>
         </ul>
     </div>
-
-    {{ content }}
+    <div class="container-fluid">
+        <div class="row header">
+            {{ content }}
+        </div>
+    </div>
 </body>
 
 </html>

@@ -1,7 +1,13 @@
 --- 
 layout: photospage 
 --- 
-{% for post in site.tags.photos %}
+
+{% assign posts = site.tags.photos 
+	| where:"year", "2018" %}
+
+<div>2018</div>
+<div class="row">
+{% for post in posts %}
 	<div class="col-4">
 		<div class="card hover-container">
 			<img class="card-img-top" src="https://jimmgarr.blob.core.windows.net/images/DSC_0271.jpg">
@@ -12,28 +18,24 @@ layout: photospage
 			</a>
 		</div>
 	</div>
-<!-- <div class="row post">
-	<div class="col-xs-1 col-md-1">
-		<div class="date-block">
-			<h3 class="date">
-				{% assign m = post.date | date: "%B" %} 
-				{% case m %}
-				{% when 'April' or 'May' or 'June' or 'July' %}{{ m }}
-				{% when 'September' %}Sept
-				{% else %}{{ post.date | date: "%b" }}
-				{% endcase %}	
-			</h3>
-			<h3 class="date">
-				{{ post.date | date: "%-d" }}
-			</h3>
-		</div>
-	</div>
-	<div class="col-xs-8 col-md-11">
-		<div class="post-details">
-			<a href="{{ post.url }}">
-				<h2 class="post-title">{{ post.title }}</h2></a>
-				{{ post.content }}
-		</div>
-	</div>
-</div> -->
 {% endfor %}
+</div>
+
+{% assign posts = site.tags.photos 
+	| where:"year", "2017" %}
+
+<div>2017</div>
+<div class="row">
+{% for post in posts %}
+	<div class="col-4">
+		<div class="card hover-container">
+			<img class="card-img-top" src="https://jimmgarr.blob.core.windows.net/images/DSC_0271.jpg">
+			<a href="{{ post.url }}">
+				<div class="overlay">
+					<h2 class="hover-text">Chicago, IL</h2>
+				</div>
+			</a>
+		</div>
+	</div>
+{% endfor %}
+</div>

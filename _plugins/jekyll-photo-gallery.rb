@@ -47,28 +47,24 @@ module Jekyll
       #Reference in site, used for sitemap
       photoSlugs = Array.new
 
-      photos.each do |photo|
-        #Iterate through array & return previous, current & next
-        # [nil, *details, nil].each_cons(3){|prev, curr, nxt|
-          photo_url = host + photo["img"]
-          title = photo["title"]
-          description = photo["description"]
-          title_stub = title&.strip&.gsub(' ', '-')&.gsub(/[^\w-]/, '') || "" #remove non-alpha and replace spaces with hyphens
-          # if(prev != nil)
-          #   previous_pic = prev["title"].strip.gsub(' ', '-').gsub(/[^\w-]/, '')
-          # else
-          #   previous_pic = ""
-          # end
-          # if(nxt != nil)
-          #   next_pic = nxt["title"].strip.gsub(' ', '-').gsub(/[^\w-]/, '')
-          # else
-          #   next_pic = ""
-          # end
+      [nil, *photos, nil].each_cons(3) {|prev, curr, nxt|
+        photo_url = host + curr["img"]
+        title = curr["title"]
+        description = curr["description"]
+        title_stub = title&.strip&.gsub(' ', '-')&.gsub(/[^\w-]/, '') || "" #remove non-alpha and replace spaces with hyphens
+        if(prev != nil)
+          previous_pic = prev["title"].strip.gsub(' ', '-').gsub(/[^\w-]/, '')
+        else
           previous_pic = ""
+        end
+        if(nxt != nil)
+          next_pic = nxt["title"].strip.gsub(' ', '-').gsub(/[^\w-]/, '')
+        else
           next_pic = ""
-          photoSlugs << photo_url
-          site.pages << PhotoPage.new(site, site.source, File.join(dir, title_stub), photo_url, previous_pic, next_pic, title, description)
-      end
+        end
+        photoSlugs << photo_url
+        site.pages << PhotoPage.new(site, site.source, File.join(dir, title_stub), photo_url, previous_pic, next_pic, title, description)
+      }
       site.data['photoSlugs'] = photoSlugs
 
       # #Create a array containing all countries

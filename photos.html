@@ -5,15 +5,15 @@ layout: photospage
 {% assign posts = site.tags.photos 
 	| where:"year", "2018" %}
 
-<div>2018</div>
-<div class="row">
+<h4>2018</h4>
+<div class="row album-list">
 {% for post in posts %}
 	<div class="col-4">
 		<div class="card hover-container">
-			<img class="card-img-top" src="https://jimmgarr.blob.core.windows.net/images/DSC_0271.jpg">
+			<img class="card-img-top" src="{{ post.thumbnail }}">
 			<a href="{{ post.url }}">
 				<div class="overlay">
-					<h2 class="hover-text">Seattle, WA</h2>
+					<h2 class="hover-text">{{ post.title }}</h2>
 				</div>
 			</a>
 		</div>
@@ -24,15 +24,15 @@ layout: photospage
 {% assign posts = site.tags.photos 
 	| where:"year", "2017" %}
 
-<div>2017</div>
-<div class="row">
+<h4>2017</h4>
+<div class="row album-list">
 {% for post in posts %}
 	<div class="col-4">
 		<div class="card hover-container">
-			<img class="card-img-top" src="https://jimmgarr.blob.core.windows.net/images/DSC_0271.jpg">
+			<img class="card-img-top" src="{{ post.thumbnail }}">
 			<a href="{{ post.url }}">
 				<div class="overlay">
-					<h2 class="hover-text">Chicago, IL</h2>
+					<h2 class="hover-text">{{ post.title }}</h2>
 				</div>
 			</a>
 		</div>

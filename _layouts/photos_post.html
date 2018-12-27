@@ -8,14 +8,14 @@
 	<title>{{ page.title }}</title>
 
 	<link rel="stylesheet" href="/css/bootstrap.css">
-	<link rel="stylesheet" href="/css/monokai.css">
-	<link rel="stylesheet" href="/css/code.css">
 	<link rel="stylesheet" href="/css/post.css">
-    <link rel="stylesheet" type="text/css" href="{{site.url}}/css/jekyll-photo-gallery.css">
-    <link rel="stylesheet" href="{{ site.url }}/css/justifiedGallery.min.css">
+    <link rel="stylesheet" href="/css/jekyll-photo-gallery.css">
+	<link rel="stylesheet" href="/css/justifiedGallery.min.css">
+	<link rel="stylesheet" href="/css/swipebox.min.css">
 	<script src="/js/bootstrap.js"></script>
-	<script src="{{ site.url }}/js/vendor/jquery-3.3.1.min.js"></script>
-<script src="{{ site.url }}/js/plugins/jquery.justifiedGallery.min.js"></script>
+	<script src="/js/vendor/jquery.min.js"></script>
+	<script src="/js/plugins/jquery.justifiedGallery.min.js"></script>
+	<script src="/js/jquery.swipebox.min.js"></script>
 
 	<script type="text/javascript">
 		var RandomColor = function () {
@@ -27,8 +27,6 @@
 
 			$(".app-bar").css("background-color", color);
 		}
-
-
 	</script>
 
 	<style>
@@ -87,7 +85,7 @@
 	<div class="row no-gutters navbar">
 		<ul class="nav navbar-nav hidden-xs">
 			<li>
-				<a href="http://jimmgarr.com">Homepage</a>
+				<a href="/">Homepage</a>
 			</li>
 		</ul>
 	</div>
@@ -101,7 +99,7 @@
 			</div>
 		</div>
 		<div class="content row justify-content-center">
-			<div class="col-12">
+			<div class="col-12" id="swipeboxContainer">
 
 				{{ content }}
 

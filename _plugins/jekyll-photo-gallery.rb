@@ -115,15 +115,8 @@ module Jekyll
       photos.each do |photo|
         if(photo["album"] == text.strip)
           @result = @result+'<div itemscope itemtype="http://schema.org/Photograph">
-                                  <a itemprop="image" class="swipebox" title="'+photo["title"]+'" href="/photography/'+photo["title"].strip.gsub(' ', '-').gsub(/[^\w-]/, '')+'/">
+                                  <a itemprop="image" class="swipebox" title="'+photo["title"]+'" href="'+host+photo["img"]+'">
                                     <img alt="'+photo["title"]+'" itemprop="thumbnailUrl" src="'+host+photo["img"]+'"/>
-                                    <meta itemprop="name" content="'+photo["title"]+'" />
-                                    <meta itemprop="isFamilyFriendly" content="true" />
-                                    <div itemprop="creator" itemscope itemtype="http://schema.org/Person">
-                                      <div itemprop="sameAs" href="http://theowinter.ch/about">
-                                        <meta itemprop="name" content="Theo Winter"/>
-                                      </div>
-                                    </div>
                                   </a>
                                 </div>'
         end
@@ -142,7 +135,9 @@ module Jekyll
                                       fixedHeight: false,
                                       lastRow : \'nojustify\',
                                       captions: true
-                                  });
+                                  }).on("jg.complete", function () {
+                                    $(".swipebox").swipebox();
+                                });
                                   $("#gallery").fadeIn(500);
                               }
                           </script>'

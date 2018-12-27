@@ -1,14 +1,32 @@
-host: https://jimmgarr.blob.core.windows.net/photoalbums/
+host: https://jimmgarr.blob.core.windows.net/albums/
 photos:
-    - title: Medication
-      img: boomer.JPG
-      album: TestAlbum
-    - title: Airplane One
+    - title: t
+      img: DSC_0084.jpg
+      album: planes2017
+    - title: t
+      img: DSC_0120.jpg
+      album: planes2017
+    - title: t
       img: DSC_0271.jpg
-      album: TestAlbum
-    - title: Airplane Two
-      img: DSC_0673-Edit.jpg
-      album: TestAlbum
-    - title: Airplane Three
+      album: planes2017
+    - title: t
+      img: DSC_0306.jpg
+      album: planes2017
+    - title: t
+      img: DSC_0350.jpg
+      album: planes2017
+    - title: t
+      img: DSC_0410.jpg
+      album: planes2017
+    - title: t
       img: DSC_0461.jpg
-      album: TestAlbum
+      album: planes2017
+    - title: t
+      img: DSC_0478-4.jpg
+      album: planes2017
+    - title: t
+      img: DSC_0654.jpg
+      album: planes2017
+    - title: t
+      img: DSC_0673.jpg
+      album: planes2017

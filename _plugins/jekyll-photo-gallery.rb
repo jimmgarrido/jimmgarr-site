@@ -115,8 +115,8 @@ module Jekyll
       photos.each do |photo|
         if(photo["album"] == text.strip)
           @result = @result+'<div itemscope itemtype="http://schema.org/Photograph">
-                                  <a itemprop="image" class="swipebox" title="'+photo["title"]+'" href="'+host+photo["img"]+'">
-                                    <img alt="'+photo["title"]+'" itemprop="thumbnailUrl" src="'+host+photo["img"]+'"/>
+                                  <a itemprop="image" class="swipebox" title="'+photo["title"]+'" href="'+host+photo["album"]+'/'+photo["img"]+'">
+                                    <img alt="'+photo["title"]+'" itemprop="thumbnailUrl" src="'+host+photo["album"]+'/'+photo["img"]+'"/>
                                   </a>
                                 </div>'
         end

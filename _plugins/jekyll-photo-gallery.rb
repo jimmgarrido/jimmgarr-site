@@ -14,7 +14,7 @@ module Jekyll
       self.data['photo_url'] = photo_url
       self.data['previous_pic'] = previous_pic
       self.data['next_pic'] = next_pic
-      self.data['title'] = title
+      # self.data['title'] = title
       self.data['description'] = description
       self.data['comments'] = true
     end
@@ -42,28 +42,29 @@ module Jekyll
       dir = site.config['photo_dir'] || 'photography'
       host = data["host"]
       photos = data["photos"]
-      site.pages << PhotoList.new(site, site.source, File.join(dir), photos, "Photography")
+      # site.pages << PhotoList.new(site, site.source, File.join(dir), photos, "Photography")
 
       #Reference in site, used for sitemap
       photoSlugs = Array.new
 
       [nil, *photos, nil].each_cons(3) {|prev, curr, nxt|
         photo_url = host + curr["img"]
-        title = curr["title"]
+        # title = curr["title"]& || ""
+        title = ""
         description = curr["description"]
-        title_stub = title&.strip&.gsub(' ', '-')&.gsub(/[^\w-]/, '') || "" #remove non-alpha and replace spaces with hyphens
+        # title_stub = title&.strip&.gsub(' ', '-')&.gsub(/[^\w-]/, '') || "" #remove non-alpha and replace spaces with hyphens
         if(prev != nil)
-          previous_pic = prev["title"].strip.gsub(' ', '-').gsub(/[^\w-]/, '')
+          previous_pic = prev["title"]&.strip&.gsub(' ', '-')&.gsub(/[^\w-]/, '') || ""
         else
           previous_pic = ""
         end
         if(nxt != nil)
-          next_pic = nxt["title"].strip.gsub(' ', '-').gsub(/[^\w-]/, '')
+          next_pic = nxt["title"]&.strip&.gsub(' ', '-')&.gsub(/[^\w-]/, '') || ""
         else
           next_pic = ""
         end
         photoSlugs << photo_url
-        site.pages << PhotoPage.new(site, site.source, File.join(dir, title_stub), photo_url, previous_pic, next_pic, title, description)
+        # site.pages << PhotoPage.new(site, site.source, File.join(dir, title_stub), photo_url, previous_pic, next_pic, title, description)
       }
       site.data['photoSlugs'] = photoSlugs
 
@@ -113,10 +114,11 @@ module Jekyll
       host = data["host"]
       photos = data["photos"]
       photos.each do |photo|
+        title = ""
         if(photo["album"] == text.strip)
           @result = @result+'<div itemscope itemtype="http://schema.org/Photograph">
-                                  <a itemprop="image" class="swipebox" title="'+photo["title"]+'" href="'+host+photo["album"]+'/'+photo["img"]+'">
-                                    <img alt="'+photo["title"]+'" itemprop="thumbnailUrl" src="'+host+photo["album"]+'/'+photo["img"]+'"/>
+                                  <a itemprop="image" class="swipebox" title="'+title+'" href="'+host+photo["album"]+'/'+photo["img"]+'">
+                                    <img alt="'+title+'" itemprop="thumbnailUrl" src="'+host+photo["album"]+'/'+photo["img"]+'"/>
                                   </a>
                                 </div>'
         end

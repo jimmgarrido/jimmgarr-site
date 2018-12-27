@@ -1,7 +1,6 @@
 host: https://jimmgarr.blob.core.windows.net/albums/
 photos:
-    - title: t
-      img: DSC_0084.jpg
+    - img: DSC_0084.jpg
       album: planes2017
     - title: t
       img: DSC_0120.jpg

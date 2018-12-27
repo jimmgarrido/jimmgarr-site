@@ -1,4 +1,4 @@
-host: https://jimmgarr.blob.core.windows.net/images/
+host: https://jimmgarr.blob.core.windows.net/photoalbums/
 photos:
     - title: Medication
       img: boomer.JPG

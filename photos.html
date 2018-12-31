@@ -2,10 +2,10 @@
 layout: photos_page 
 --- 
 
-{% for post in site.tags.photos %}
 <div class="row justify-content-center">
-	<div class="col-10">
+	<div class="col-12">
 		<div class="row album-list">
+			{% for post in site.tags.photos %}
 			<div class="col-4">
 				<div class="card hover-container">
 					<img class="card-img-top" src="{{ post.thumbnail }}">
@@ -16,10 +16,10 @@ layout: photos_page
 					</a>
 				</div>
 			</div>
+			{% endfor %}
 		</div>
 	</div>
 </div>
-{% endfor %}
 
 
 <!-- {% assign posts = site.tags.photos 

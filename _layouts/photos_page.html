@@ -61,6 +61,10 @@
             margin-top: 5px;
             margin-bottom: 50px;
         }
+
+        h3 {
+			font-size: 1.3rem;
+		}
     </style>
 </head>
 
@@ -70,6 +74,12 @@
     <div class="container">
 
         {% include header.html %}
+
+        <div class="row">
+            <div class="col-auto">
+                <h3>Albums</h3>
+            </div>
+        </div>
 
         {{ content }}
 

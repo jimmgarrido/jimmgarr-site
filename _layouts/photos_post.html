@@ -9,25 +9,22 @@
 
 	<link rel="stylesheet" href="/css/bootstrap.css">
 	<link rel="stylesheet" href="/css/post.css">
+	<link rel="stylesheet" href="/css/home.css">
     <link rel="stylesheet" href="/css/jekyll-photo-gallery.css">
 	<link rel="stylesheet" href="/css/justifiedGallery.min.css">
 	<link rel="stylesheet" href="/css/swipebox.min.css">
-	<script src="/js/bootstrap.js"></script>
+	<script src="/js/bootstrap.bundle.min.js"></script>
 	<script src="/js/jquery.min.js"></script>
 	<script src="/js/plugins/jquery.justifiedGallery.min.js"></script>
 	<script src="/js/plugins/jquery.swipebox.min.js"></script>
+	<script src="/js/header.js"></script>
 
-	<script type="text/javascript">
-		var RandomColor = function () {
-			colors_of_the_rainbow = ["#A4C400", "#60A917", "#008A00", "#00ABA9", "#1BA1E2", "#0050EF",
-				"#6A00FF", "#AA00FF", "#D80073", "#A20025", "#E51400", "#FA6800",
-				"#F0A30A", "#76608A"];
-
-			var color = colors_of_the_rainbow[Math.floor(Math.random() * colors_of_the_rainbow.length)];
-
-			$(".app-bar").css("background-color", color);
-		}
-	</script>
+	<script>
+			$(function () {
+				$("#photos-header").addClass("selected-header");
+				RandomColor();
+			});
+		</script>
 
 	<style>
 		body {
@@ -81,27 +78,27 @@
 		#swipeboxContainer {
 			margin-top: 20px;
 		}
+
+		h3 {
+			font-size: 1.3rem;
+		}
 	</style>
 </head>
 
 <body>
-	<!--Nav-->
-	<div class="row no-gutters navbar">
-		<ul class="nav navbar-nav hidden-xs">
-			<li>
-				<a href="/">Home</a>
-			</li>
-		</ul>
-	</div>
+	<!--Top-bar-->
+	<div class="top-bar row no-gutters"></div>
+
+	{% include header.html %}
 
 	<div class="container">
 		<!--Content-->
-		<div class="row justify-content-center">
-			<div class="col-12">
-				<h1> {{ page.title }} </h1>
+		<div class="row">
+			<div class="col-auto">
+				<h3> Galleries > {{ page.title }} </h3>
 			</div>
 		</div>
-		<div class="content row justify-content-center">
+		<div class="row">
 			<div class="col-12" id="swipeboxContainer">
 
 				{{ content }}

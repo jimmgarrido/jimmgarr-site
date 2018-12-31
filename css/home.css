@@ -10,7 +10,7 @@ body {
 }
 
 .header {
-    margin: 25px;
+    margin: 20px 25px;
 }
 
 .header a {
@@ -21,6 +21,7 @@ body {
     color: rgba(0, 0, 0, 0.65);
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI SemiLight", "Roboto", Helvetica, sans-serif;
     margin: 0 25px 50px 25px;
+    font-size: 1.5rem;
 }
 
 .selected-header {

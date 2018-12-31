@@ -6,9 +6,9 @@ layout: home_page
 {% for post in site.tags.blog limit:3 %}
 <div class="d-none d-sm-block">
 	<div class="row justify-content-center">
-		<div class="col-xs-10 col-sm-8 col-md-8 col-lg-10">
+		<div class="col-10">
 			<div class="row post">
-				<div class="col-xs-1 col-md-1">
+				<div class="col-auto">
 					<div class="date-block">
 						<h3 class="date">
 							{% assign m = post.date | date: "%B" %} 
@@ -23,7 +23,7 @@ layout: home_page
 						</h3>
 					</div>
 				</div>
-				<div class="col-xs-8 col-md-11">
+				<div class="col-9 col-md-10">
 					<div class="post-details">
 						<a href="{{ post.url }}">
 							<h2 class="post-title">{{ post.title }}</h2></a>

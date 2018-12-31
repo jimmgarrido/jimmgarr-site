@@ -79,18 +79,8 @@
     <div class="top-bar row no-gutters"></div>
 
     <div class="container">
-        <!--Header-->
-		<div class="row justify-content-center header">
-            <div class="col-1">
-                <h3><a href="/">Posts</a></h3>
-            </div>
-            <div class="col-1 offset-1">
-                <h3><a href="/photos" class="selected-header">Photos</a></h3>
-            </div>
-            <div class="col-1 offset-1">
-                <h3><a href="/about">About</a></h3>
-            </div>
-        </div>
+        
+        {% include header.html %}
 
         {{ content }}
 

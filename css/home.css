@@ -24,6 +24,10 @@ body {
     font-size: 1.5rem;
 }
 
+.mobile-header {
+    margin-top: 15px;
+}
+
 .selected-header {
     border-bottom-width: 2px;
     border-bottom-style: solid;

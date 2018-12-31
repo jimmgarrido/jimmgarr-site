@@ -5,37 +5,49 @@ layout: photos_page
 {% assign posts = site.tags.photos 
 	| where:"year", "2018" %}
 
-<h4>2018</h4>
-<div class="row album-list">
-{% for post in posts %}
-	<div class="col-4">
-		<div class="card hover-container">
-			<img class="card-img-top" src="{{ post.thumbnail }}">
-			<a href="{{ post.url }}">
-				<div class="overlay">
-					<h2 class="hover-text">{{ post.title }}</h2>
+<div class="row justify-content-center">
+	<div class="col-10">
+		<div class="row">
+			<h4>2018</h4>
+		</div>
+		<div class="row album-list">
+		{% for post in posts %}
+			<div class="col-4">
+				<div class="card hover-container">
+					<img class="card-img-top" src="{{ post.thumbnail }}">
+					<a href="{{ post.url }}">
+						<div class="overlay">
+							<h2 class="hover-text">{{ post.title }}</h2>
+						</div>
+					</a>
 				</div>
-			</a>
+			</div>
+		{% endfor %}
 		</div>
 	</div>
-{% endfor %}
 </div>
 
 {% assign posts = site.tags.photos 
 	| where:"year", "2017" %}
 
-<h4>2017</h4>
-<div class="row album-list">
-{% for post in posts %}
-	<div class="col-4">
-		<div class="card hover-container">
-			<img class="card-img-top" src="{{ post.thumbnail }}">
-			<a href="{{ post.url }}">
-				<div class="overlay">
-					<h2 class="hover-text">{{ post.title }}</h2>
+<div class="row justify-content-center">
+	<div class="col-10">
+		<div class="row">
+			<h4>2017</h4>
+		</div>
+		<div class="row album-list">
+		{% for post in posts %}
+			<div class="col-4">
+				<div class="card hover-container">
+					<img class="card-img-top" src="{{ post.thumbnail }}">
+					<a href="{{ post.url }}">
+						<div class="overlay">
+							<h2 class="hover-text">{{ post.title }}</h2>
+						</div>
+					</a>
 				</div>
-			</a>
+			</div>
+		{% endfor %}
 		</div>
 	</div>
-{% endfor %}
 </div>

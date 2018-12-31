@@ -83,13 +83,8 @@ body {
     margin-top: 25px;
 }
 
-.post .col-lg-1,
-.pic .col-lg-1 {
-    width: 85px;
-}
-
 .about {
-    margin-top: 30px;
+    margin-top: 0px;
 }
 
 .about-text {

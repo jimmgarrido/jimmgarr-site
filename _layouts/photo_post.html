@@ -13,8 +13,9 @@
     <link rel="stylesheet" href="/css/jekyll-photo-gallery.css">
 	<link rel="stylesheet" href="/css/justifiedGallery.min.css">
 	<link rel="stylesheet" href="/css/swipebox.min.css">
-	<script src="/js/bootstrap.bundle.min.js"></script>
+
 	<script src="/js/jquery.min.js"></script>
+	<script src="/js/bootstrap.bundle.min.js"></script>
 	<script src="/js/plugins/jquery.justifiedGallery.min.js"></script>
 	<script src="/js/plugins/jquery.swipebox.min.js"></script>
 	<script src="/js/header.js"></script>
@@ -89,9 +90,10 @@
 	<!--Top-bar-->
 	<div class="top-bar row no-gutters"></div>
 
-	{% include header.html %}
-
 	<div class="container">
+		
+		{% include header.html %}
+
 		<!--Content-->
 		<div class="row">
 			<div class="col-auto">
@@ -99,7 +101,7 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-12" id="swipeboxContainer">
+			<div class="col-8 col-sm-12" id="swipeboxContainer">
 
 				{{ content }}
 

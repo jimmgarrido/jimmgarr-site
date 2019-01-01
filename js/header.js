@@ -5,7 +5,7 @@ var RandomColor = function () {
 
     var color = colors_of_the_rainbow[Math.floor(Math.random() * colors_of_the_rainbow.length)];
 
-    $(".top-bar, .date-block, #mobile-date-block").css("background-color", color);
+    $(".top-bar, .date-block, .date-block-mobile").css("background-color", color);
     $(".icon, .selected-header").css("color", color);
     $(".selected-header").css("border-bottom-color", color);
 }

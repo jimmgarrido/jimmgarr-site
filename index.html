@@ -38,9 +38,9 @@ layout: home_page
 <div class="d-sm-none">
 	<div class="row justify-content-center">
 		<div class="col-10">
-			<div class="post row">
+			<div class="post-mobile row">
 				<div class="col-3">
-					<div class="date-block">
+					<div class="date-block-mobile">
 						<h3 class="date">
 							{% assign m = post.date | date: "%B" %} 
 							{% case m %}
@@ -55,7 +55,7 @@ layout: home_page
 					</div>
 				</div>
 				<div class="col-8">
-					<div class="post-details-mobile">
+					<div class="post-detail-mobile">
 						<a href="{{ post.url }}">
 							<h3>{{ post.title }}</h3></a>
 							<h3><small>{{ post.description }}</small></h3>

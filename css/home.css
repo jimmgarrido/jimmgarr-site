@@ -27,6 +27,7 @@ body {
 
 .mobile-header {
     margin-top: 15px;
+    margin-bottom: 25px;
 }
 
 .selected-header {
@@ -52,6 +53,16 @@ body {
     height: 65px;
 }
 
+.date-block-mobile {
+    padding: 10px 14px 14px 14px;
+    width: 60px;
+    height: 60px;
+}
+
+.date-block-mobile h3 {
+    font-size: 16px;
+}
+
 .post-details {
     margin-top: 0px;
     margin-left: 10px;
@@ -59,12 +70,6 @@ body {
 
 .post-details-mobile {
     margin-left: 10px;
-}
-
-.post-details-mobile h3 {
-    font-size: 20px;
-    margin: 0;
-    color: inherit;
 }
 
 .date {
@@ -77,6 +82,15 @@ body {
 
 .post {
     margin-bottom: 45px;
+}
+
+.post-mobile {
+    margin-bottom: 20px;
+}
+
+
+.post-detail-mobile h3 {
+    font-size: 18px;
 }
 
 .pic {

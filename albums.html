@@ -6,7 +6,7 @@ layout: album_page
 	<div class="col-12">
 		<div class="row album-list">
 			{% for post in site.tags.photos %}
-			<div class="col-6 col-sm-5 col-md-4">
+			<div class="col-md-4 d-none d-md-block">
 				<div class="card hover-container">
 					<img class="card-img-top" src="{{ post.thumbnail }}">
 					<a href="{{ post.url }}">
@@ -15,6 +15,15 @@ layout: album_page
 						</div>
 					</a>
 				</div>
+			</div>
+			<div class="col-6 col-sm-5 d-md-none">
+				<div class="card hover-container">
+					<a href="{{ post.url }}">
+						<img class="card-img-top" src="{{ post.thumbnail }}">
+					</a>
+				</div>
+				<h3>{{ post.title }}</h3>
+
 			</div>
 			{% endfor %}
 		</div>

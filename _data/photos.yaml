@@ -1,31 +1,74 @@
 host: https://jimmgarr.blob.core.windows.net/albums/
 photos:
     - img: DSC_0084.jpg
-      album: planes2017
+      album: planes
     - title: t
       img: DSC_0120.jpg
-      album: planes2017
+      album: planes
     - title: t
       img: DSC_0271.jpg
-      album: planes2017
+      album: planes
+    - title: t
+      img: DSC_0302.jpg
+      album: planes
     - title: t
       img: DSC_0306.jpg
-      album: planes2017
+      album: planes
     - title: t
       img: DSC_0350.jpg
-      album: planes2017
+      album: planes
+    - title: t
+      img: DSC_0358.jpg
+      album: planes
+    - title: t
+      img: DSC_0363.jpg
+      album: planes
+    - title: t
+      img: DSC_0368.jpg
+      album: planes
+    - title: t
+      img: DSC_0401.jpg
+      album: planes
     - title: t
       img: DSC_0410.jpg
-      album: planes2017
+      album: planes
+    - title: t
+      img: DSC_0458.jpg
+      album: planes
     - title: t
       img: DSC_0461.jpg
-      album: planes2017
+      album: planes
     - title: t
       img: DSC_0478-4.jpg
-      album: planes2017
+      album: planes
+    - title: t
+      img: DSC_0513.jpg
+      album: planes
+    - title: t
+      img: DSC_0579.jpg
+      album: planes
+    - title: t
+      img: DSC_0639.jpg
+      album: planes
     - title: t
       img: DSC_0654.jpg
-      album: planes2017
+      album: planes
     - title: t
       img: DSC_0673.jpg
-      album: planes2017
+      album: planes
+    - title: t
+      img: DSC01889.jpg
+      album: planes
+    - title: t
+      img: DSC01982.jpg
+      album: planes
+    - title: t
+      img: DSC02001.jpg
+      album: planes
+    - title: t
+      img: DSC02211.jpg
+      album: planes
+    - title: t
+      img: IMG_0556.jpg
+      album: planes
+    

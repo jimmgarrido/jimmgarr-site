@@ -1,7 +1,8 @@
 ---
-layout: posts
+layout: post
 title: Alert Notifcations With Xamarin.Mac
 description: Notifications can be useful not only on mobile but on the desktop as well. 
+tags: blog
 ---
 
 On macOS, the `NSUserNotification` and `NSUserNotificationCenter` classes allow you to deliver and respond to notifications presented to the user. 

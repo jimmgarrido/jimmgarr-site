@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"></meta>
+    <meta charset="utf-8"></meta>
+
+    <title>Photos | Jimmy Garrido</title>
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/header.js"></script>
+
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/monokai.css">
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/code.css">
+    <link rel="stylesheet" href="/css/post.css">
+    <link rel="stylesheet" href="/css/main.css">
+
+    <script>
+        $(function () {
+            $("#photos-header").addClass("selected-header");
+            RandomColor();
+        });
+    </script>
+
+    <style>
+        .col-4 {
+            margin-top: 20px;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            transition: .3s ease;
+            background-color: #000000;
+        }
+
+        .hover-container:hover .overlay {
+            opacity: .75;
+        }
+
+        .hover-text {
+            color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            text-align: center;
+            margin: 0;
+        }
+
+        .album-list {
+            margin-top: 5px;
+            margin-bottom: 50px;
+        }
+
+        h3 {
+			font-size: 1.3rem;
+		}
+    </style>
+</head>
+
+<body>
+    <div class="top-bar row no-gutters"></div>
+
+    <div class="container">
+
+        {% include header.html %}
+
+        <div class="row">
+            <div class="col-auto">
+                <h3>Albums</h3>
+            </div>
+        </div>
+
+        {{ content }}
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"></meta>
+    <meta charset="utf-8"></meta>
+
+    <title>About | Jimmy Garrido</title>
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/header.js"></script>
+
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/monokai.css">
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/code.css">
+    <link rel="stylesheet" href="/css/main.css">
+
+    <script>
+        $(function () {
+            $("#about-header").addClass("selected-header");
+            RandomColor();
+        });
+    </script>
+
+    <style>
+        .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            transition: .3s ease;
+            background-color: #000000;
+        }
+
+        .hover-container:hover .overlay {
+            opacity: .75;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top-bar row no-gutters"></div>
+
+    <div class="container">
+
+        {% include header.html %}
+
+            <div class="about row justify-content-center">
+                    <div class="col-10">
+                        <div class="pic row">
+                            <div class="col-4">
+                                <img src="../assets/me.jpg" class="portrait-image"/>
+                            </div>
+                            <div class="col-8">
+                                <p class="about-text">Hello! My name is Jimmy Garrido.</p>							
+                                <p class="about-text"> I focus on mobile app development with Xamarin and UWP.</p>
+                                <p class="about-text"> Check out my 
+                                    <a href="https://github.com/jimmgarrido" style="color:#0092fa">
+                                    <strong>GitHub</strong></a>,
+                                    follow me on
+                                    <a href="https://twitter.com/jimmgarrido" style="color:#0092fa">
+                                    <strong>Twitter</strong></a>,
+                                    or
+                                    <a href="mailto:jimmy@nexdev.co" style="color:#0092fa">
+                                    <strong>email</strong></a>
+                                    me.
+                                    </p>
+                            </div>
+                            <div class="mobile-social-links about-text d-none">
+                                <p>Hello! My name is Jimmy Garrido. I focus on mobile app 
+                                    development with Xamarin and UWP.</p>
+                                <p> 
+                                    <a class="icon" href="https://github.com/jimmgarrido">
+                                        <span class="mif-github"></span>
+                                    </a>
+                                    <a class="icon" href="https://twitter.com/jimmgarrido">
+                                        <span class="mif-twitter"></span>
+                                    </a>
+                                    <a class="icon" href="https://www.linkedin.com/in/jimmy-garrido-b2140274/">
+                                        <span class="mif-linkedin"></span>
+                                    </a>	
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </div>
+</body>
+</html>

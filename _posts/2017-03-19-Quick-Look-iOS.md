@@ -1,7 +1,8 @@
 ---
-layout: posts
+layout: post
 title: Using Quick Look on Xamarin.iOS
 description: Show users file previews without leaving your app.
+tags: blog
 ---
 
 Quick Look is a built in framework on macOS and iOS that lets you present file previews within your app. You may already be familiar with it on macOS where pressing the Space bar inside Finder will bring up a preview for certain files. On iOS, there are actually two ways to use Quick Look: with a document interaction controller ([`UIDocumentInteractionController`](https://developer.xamarin.com/api/type/UIKit.UIDocumentInteractionController/)) or with the framework directly ([`QLPreviewController`](https://developer.xamarin.com/api/type/QuickLook.QLPreviewController/)). 

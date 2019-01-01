@@ -1,0 +1,69 @@
+h1 {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI SemiLight", "Roboto", Helvetica, sans-serif;
+    font-size: 38px;
+    font-weight: 300;
+    text-align: center;
+    margin: 25px 0 10px 0;
+    color: rgba(0,0,0,0.6);
+}
+
+h2 {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI SemiLight", "Roboto", Helvetica, sans-serif;
+    font-size: 32px;
+    text-align: center;
+    margin: 0 0 10px 0;
+    color: rgba(0,0,0,0.6);
+}
+
+.post h2 {
+    font-size: 1.6rem;
+    text-align: left;
+}
+
+.post h3 {
+    font-size: 1.3rem;
+    color: rgba(33, 37, 41, 0.85)				
+}
+
+/* ul, ol, li {
+    margin: 0;
+} */
+
+li {
+    color:rgba(0, 0, 0, 0.7);
+    font-size: 17px;
+}
+
+p {
+    color:rgba(0, 0, 0, 0.7);
+    font-size: 17px;
+}
+
+.nav>li>a {
+    color: white;
+}
+
+.image-wrapper {
+    text-align: center;
+}
+
+.image-caption {
+    color: rgba(0, 0, 0, 0.7);
+    margin-top: 1.0rem;
+    font-size: 1.0rem;
+    font-style: italic;
+}
+
+#date {
+    text-align: center;
+    margin: 10px 0 30px 0;
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.6)
+}
+
+#signature {
+    text-align: center;
+    margin: 2.0rem 0;
+    font-size: 1.2rem;
+    color: rgba(0, 0, 0, 0.6)
+}

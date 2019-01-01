@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"></meta>
+	<meta charset="utf-8"></meta>
+
+	<title>Home | Jimmy Garrido</title>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="js/header.js"></script>
+	
+	<link rel="stylesheet" href="css/bootstrap.css" >
+	<link rel="stylesheet" href="css/monokai.css">
+	<link rel="stylesheet" href="css/home.css">
+	<link rel="stylesheet" href="css/code.css">
+	<link rel="stylesheet" href="css/post.css">
+	<link rel="stylesheet" href="css/main.css">
+
+	<script>
+		$(function () {
+            $("#posts-header").addClass("selected-header");
+            RandomColor();
+        });
+	</script>
+</head>
+
+<body>
+	<!--Top-bar-->
+	<div class="top-bar row no-gutters"></div>
+
+	<!--Content-->
+	<div class="container">
+		
+		{% include header.html %}
+
+		<!--Blog-->
+		{{ content }}
+		
+	</div>
+</body>
+
+</html>

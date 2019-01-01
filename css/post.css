@@ -7,31 +7,28 @@ h1 {
     color: rgba(0,0,0,0.6);
 }
 
-h2 {
+.post h2 {
+    font-size: 1.6rem;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI SemiLight", "Open Sans Light", Verdana, Arial, Helvetica, sans-serif;
-    margin: 2.1rem 0 1.2rem 0;
 }
 
-h3 {
-    margin: 1.5rem 0 0.6rem 0;
+.post h3 {
+    font-size: 1.3rem;
     color: rgba(33, 37, 41, 0.85)				
 }
 
-ul, ol, li {
+/* ul, ol, li {
     margin: 0;
-}
+} */
 
 li {
     color:rgba(0, 0, 0, 0.7);
-    font-size: 18px;
-    line-height: 1.6em;
+    font-size: 17px;
 }
 
 p {
     color:rgba(0, 0, 0, 0.7);
-    font-size: 18px;
-    line-height: 1.6em;
-    margin: 20px 0;
+    font-size: 17px;
 }
 
 .nav>li>a {
@@ -45,6 +42,6 @@ p {
 .image-caption {
     color: rgba(0, 0, 0, 0.7);
     margin-top: 1.0rem;
-    font-size: 1.1em;
+    font-size: 1.0rem;
     font-style: italic;
 }

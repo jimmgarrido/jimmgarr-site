@@ -10,7 +10,7 @@ var RandomColor = function () {
     $(".selected-header").css("border-bottom-color", color);
 }
 
-$(function () {
+(function () {
     RandomColor();
     $(".top-bar, .selected-header a, #top-bar-phone, .date-block, #mobile-date-block").click(RandomColor);
 });

@@ -1,6 +1,9 @@
+h2 {
+    font-size:24px;
+}
+
 .post-title {
-    margin-top: 0;
-    margin-bottom: 20px;
+    margin-top: -10px;
     font-size: 1.7rem;
     text-align: left;
     color: inherit;
@@ -11,25 +14,10 @@
     max-width: 70%;
 }
 
-.date-block {
-    padding: 12px 14px 14px 14px;
-    width: 65px;
-    height: 65px;
-}
-
-.date-block-mobile {
-    padding: 10px 14px 14px 14px;
-    width: 60px;
-    height: 60px;
-}
-
-.date-block-mobile h3 {
-    font-size: 16px;
-}
-
-.post-details {
-    margin-top: 0px;
-    margin-left: 10px;
+.post-description {
+    margin-top: -5px;
+    font-family: "Segoe UI SemiLight", Helvetica, -apple-system, BlinkMacSystemFont, "Open Sans Light", Verdana, Arial, sans-serif;
+    color: rgba(0, 0, 0, 0.70);
 }
 
 .post-details-mobile {
@@ -37,15 +25,14 @@
 }
 
 .date {
-    color: white;
-    text-align: center;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 20px;
-    margin: 0;
+    font-family: "Segoe UI SemiLight", Helvetica, -apple-system, BlinkMacSystemFont, "Open Sans Light", Verdana, Arial, sans-serif;
+    color: rgba(0, 0, 0, 0.70);
 }
 
-.post {
-    margin-bottom: 45px;
+.posts {
+    margin-bottom: 20px;
 }
 
 .post-mobile {

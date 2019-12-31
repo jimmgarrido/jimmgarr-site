@@ -17,8 +17,8 @@ This is where alert notifications come in. By contrast, alert notifications do n
 
  But before you can use them in your app, you need to do a couple of things:
 
-- Declare the style in the Info.plist file
-- Sign the app bundle
+1. Declare the style in the Info.plist file
+2. Sign the app bundle
 
 ## Configure Your App
 
@@ -41,7 +41,7 @@ The `NSUserNotification` class has properties that allow you to customize your a
 
 You can also enable your notification to have more than one action by using the `AdditionalActions` property and passing it an `NSUserNotificationAction` array:
  
-{% highlight csharp linenos %}
+{% highlight csharp %}
 myNotification.AdditionalActions = new NSUserNotificationAction[] { 
     NSUserNotificationAction.GetAction("additional","Additional action"),
     NSUserNotificationAction.GetAction("more","More")
@@ -57,7 +57,7 @@ The additional actions can be seen by clicking and holding the main action butto
 
 When a user interacts with the notification, it will call the `DidActivateNotification` delegate. Once inside the delegate, you can get the `ActivationType` property to determine what activated it. If it was due to one of the additional actions, you can then use the `AdditionalActivationAction` property to get the specific action:
 
-{%highlight csharp linenos %}
+{%highlight csharp %}
 notCenter.DidActivateNotification += (s, e) => 
 {
     switch (e.Notification.ActivationType)

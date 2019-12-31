@@ -1,28 +1,20 @@
+html {
+    overflow-y: scroll;
+}
+
 h1 {
     font-weight: 400;
 }
 
-h2 {
-    font-size:24px;
-    font-weight: 400;
-}
-
 .post-title {
-    margin-top: -10px;
-    font-size: 1.7rem;
+    margin-top: 2px;
     text-align: left;
     color: inherit;
 }
 
-.portrait-image {
-    border-radius: 50%;
-    max-width: 70%;
-}
-
 .post-description {
-    margin-top: -5px;
-    /* font-family: "Segoe UI SemiLight", Helvetica, -apple-system, BlinkMacSystemFont, "Open Sans Light", Verdana, Arial, sans-serif; */
-    color: rgba(0, 0, 0, 0.70);
+    color:rgba(0, 0, 0, 0.70);
+    font-size: 17px;
 }
 
 .post-details-mobile {
@@ -31,9 +23,8 @@ h2 {
 
 .date {
     font-size: 16px;
-    line-height: 20px;
-    /* font-family: "Segoe UI SemiLight", Helvetica, -apple-system, BlinkMacSystemFont, "Open Sans Light", Verdana, Arial, sans-serif; */
     color: rgba(0, 0, 0, 0.70);
+    margin-bottom: 0;
 }
 
 .posts {

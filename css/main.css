@@ -2,6 +2,10 @@ a:hover, a:focus {
     text-decoration: none;
 }
 
+a:link, a:visited {
+    color: rgb(1, 100, 200);
+}
+
 .top-bar {
     background-color: #fa6800;
     text-align: center;
@@ -16,12 +20,11 @@ a:hover, a:focus {
 
 .header a {
     color: rgba(0, 0, 0, 0.70);
-    /* font-family: "Segoe UI SemiLight", Helvetica, -apple-system, BlinkMacSystemFont, "Open Sans Light", Verdana, Arial, sans-serif; */
 }
 
 .header h2 {
-    color: rgba(0, 0, 0, 0.65);
-    font-size: 20px;
+    font-size:20px;
+    font-weight: 400;
     text-align: center;
 }
 
@@ -33,5 +36,10 @@ a:hover, a:focus {
 .selected-header {
     border-bottom-width: 2px;
     border-bottom-style: solid;
-    padding-bottom: 5px;
+    padding-bottom: 4px;
+}
+
+.portrait-image {
+    border-radius: 50%;
+    max-width: 70%;
 }

@@ -7,37 +7,24 @@
 
 	<title>{{ page.title }}</title>
 
-	<link rel="stylesheet" href="/css/bootstrap.css">
-	<link rel="stylesheet" href="/css/monokai.css">
-	<link rel="stylesheet" href="/css/code.css">
+	<link rel="stylesheet" href="/css/mini-default.min.css">
+	<link rel="stylesheet" href="/css/vs.css">
 	<link rel="stylesheet" href="/css/post.css">
 	<link rel="stylesheet" href="/css/main.css">
-	<script src="/js/jquery.min.js"></script>
-	<script src="/js/bootstrap.bundle.min.js"></script>
-	<script src="/js/header.js"></script>
 
-	<script>
-		$(function () {
-			$("#posts-header").addClass("selected-header");
-			RandomColor();
-		});
-	</script>
+	<script src="/js/header.js"></script>
 </head>
 
 <body>
-	<!--Nav-->
-	<div class="top-bar row no-gutters"></div>
-
-
 	<div class="container">
 
 		{% include header.html %}
 		
 		<!--Content-->
-		<div class="row justify-content-center">
-			<div class="col-11 col-md-9">
-				<h2> {{ page.title }} </h2>
-				<h4 id="date">{{ page.date | date_to_string }}</h4>
+		<div class="row">
+			<div class="col-sm-8 col-sm-offset-2">
+				<h4 id="date">{{ page.date | date: "%-d %B %Y" }}</h4>
+				<h2 class="post-title"> {{ page.title }} </h2>
 
 				<div class="post">			
 					{{ content }}
@@ -47,6 +34,16 @@
 			</div>
 		</div>
 	</div>
+
+	
+	<script>
+		(function () {
+			var headerElement = document.getElementById("blog-header");
+			headerElement.classList.add("selected-header");
+            // $("#").addClass("selected-header");
+            RandomColor();
+        })();
+	</script>
 </body>
 
 </html>

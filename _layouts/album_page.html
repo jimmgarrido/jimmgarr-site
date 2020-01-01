@@ -11,25 +11,10 @@
     <script src="/js/bootstrap.bundle.min.js"></script>
     <script src="/js/header.js"></script>
 
-    <link rel="stylesheet" href="/css/bootstrap.css">
-    <link rel="stylesheet" href="/css/monokai.css">
-    <link rel="stylesheet" href="/css/home.css">
-    <link rel="stylesheet" href="/css/code.css">
-    <link rel="stylesheet" href="/css/post.css">
-    <link rel="stylesheet" href="/css/main.css">
-
-    <script>
-        $(function () {
-            $("#photos-header").addClass("selected-header");
-            RandomColor();
-        });
-    </script>
+    <link rel="stylesheet" href="/css/mini-default.min.css">
+	<link rel="stylesheet" href="/css/main.css">
 
     <style>
-        .col-4 {
-            margin-top: 20px;
-        }
-
         .overlay {
             position: absolute;
             top: 0;
@@ -62,22 +47,16 @@
             margin-top: 5px;
             margin-bottom: 50px;
         }
-
-        h3 {
-			font-size: 1.3rem;
-		}
     </style>
 </head>
 
 <body>
-    <div class="top-bar row no-gutters"></div>
-
     <div class="container">
 
         {% include header.html %}
 
         <div class="row">
-            <div class="col-auto d-none d-md-block">
+            <div class="col-sm-10 col-md-8 col-lg-6 col-sm-offset-1 col-md-offset-2 col-lg-offset-3">
                 <h3>Albums</h3>
             </div>
         </div>
@@ -85,6 +64,13 @@
         {{ content }}
 
     </div>
+
+    <script>
+        $(function () {
+            $("#photos-header").addClass("selected-header");
+            RandomColor();
+        });
+    </script>
 </body>
 
 </html>

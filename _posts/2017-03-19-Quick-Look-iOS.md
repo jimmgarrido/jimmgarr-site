@@ -10,12 +10,12 @@ Quick Look is a built in framework on macOS and iOS that lets you present file p
 
 For the purposes of this guide, we'll be using a new iOS app project that has a navigation controller with a `UITableViewContoller` as its root. Inside the table source class we have a string array with the paths to some local files:
 
-{% highlight csharp linenos %}
+```csharp
 public static string[] Documents = {
     "sampledocs/gettingstarted.pdf",
     "sampledocs/Xamagon.png"
 };
-{% endhighlight %}
+```
 
 **You can check out and download the complete sample app from [Github](https://github.com/jimmgarrido/document-interaction-sample).**
 
@@ -35,7 +35,7 @@ Since we'll need a delegate, start by creating a class that inherits from [`UIDo
 
 This method willl need to return a view controller that the preview can use as a parent. In the case of our sample, we can use the root `UITableViewController` by defining a constructor in the delegate that takes a parameter. We then hold a reference to it so that we can return it later:
 
-{% highlight csharp linenos %}
+```csharp
 public class InteractionDelegate : UIDocumentInteractionControllerDelegate
 {
     UIViewController parentController;
@@ -51,16 +51,16 @@ public class InteractionDelegate : UIDocumentInteractionControllerDelegate
         return parentController;
     }
 }
-{% endhighlight %}
+```
 
 When you are ready to present a preview, create a new document interaction controller with the static `FromUrl` method inside `UIDocumentInteractionController`. by passing it a path to the file. Then assign the delegate and present the controller with `PresentPreview`:
 
-{% highlight csharp linenos %}
+```csharp
 var previewController = UIDocumentInteractionController.FromUrl(
     NSUrl.FromFilename(TableSource.Documents[indexPath.Row]));
 previewController.Delegate = new InteractionDelegate(this);
 previewController.PresentPreview(true);
-{% endhighlight %}
+```
 
 
 {% include image.html
@@ -91,7 +91,7 @@ The biggest difference with the Quick Look preview controller is that it require
 
 To begin, create a new class that implements [`IQLPreviewControllerDataSource`](https://developer.xamarin.com/api/type/QuickLook.IQLPreviewControllerDataSource/):
 
-{% highlight csharp linenos %}
+```csharp
 public class QuickLook : IQLPreviewControllerDataSource
 {
     public nint PreviewItemCount(QLPreviewController controller)
@@ -104,11 +104,11 @@ public class QuickLook : IQLPreviewControllerDataSource
         return new PreviewItem(index);
     }
 }
-{% endhighlight %}
+```
 
 Since `GetPreviewItem` needs to return a `IQLPreviewItem` object, also create another class that inherits from [`QLPreviewItem`](https://developer.xamarin.com/api/type/QuickLook.QLPreviewItem/). This will be the wrapper class for the preview items, so override the `ItemUrl` property to return a valid path for the selected file. Overriding `ItemTitle` is optional and can be used to customize the title shown for the file:
 
-{% highlight csharp linenos %}
+```csharp
  public class PreviewItem : QLPreviewItem
 {
     nint itemIndex;
@@ -130,20 +130,20 @@ Since `GetPreviewItem` needs to return a `IQLPreviewItem` object, also create an
         fileUrl = NSUrl.FromFilename(TableSource.Documents[itemIndex]);
     }
 }
-{% endhighlight %}
+```
 
 **Optional:** Create a delegate for the Quick Look preview controller if you would like to include a zoom animation, determine whether a file can be previewed, or respond to the controller's dismissal. You can use the same class as the data source by having it also inherit from [`QLPreviewControllerDelegate`](https://developer.xamarin.com/api/type/QuickLook.QLPreviewControllerDelegate/) and implementing the methods you need:
 
-{% highlight csharp linenos %}
+```csharp
 public class QuickLook : QLPreviewControllerDelegate, IQLPreviewControllerDataSource
 {
     ...
 }
-{% endhighlight %}
+```
 
 With the data source implemented, we can now put all the pieces together. When you want to present a preview, create a `QLPreviewController` and set its data source and optional delegate. Since the data source can contain multiple files, first set `CurrentPreviewItemIndex` and then push the controller onto a navigation controller or present it modally:
 
-{% highlight csharp linenos %}
+```csharp
 var previewController = new QLPreviewController();
 var sourceDelegate = new QuickLook();
 
@@ -152,7 +152,7 @@ previewController.DataSource = sourceDelegate;
 
 previewController.CurrentPreviewItemIndex = indexPath.Row;
 NavigationController.PushViewController(previewController, true); 
-{% endhighlight %}
+```
 
 
 {% include image.html

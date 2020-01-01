@@ -1,35 +1,16 @@
+h1 {
+    font-weight: 400;
+}
+
 .post-title {
-    margin-top: 0;
-    margin-bottom: 20px;
-    font-size: 1.7rem;
+    margin-top: 2px;
     text-align: left;
     color: inherit;
 }
 
-.portrait-image {
-    border-radius: 50%;
-    max-width: 70%;
-}
-
-.date-block {
-    padding: 12px 14px 14px 14px;
-    width: 65px;
-    height: 65px;
-}
-
-.date-block-mobile {
-    padding: 10px 14px 14px 14px;
-    width: 60px;
-    height: 60px;
-}
-
-.date-block-mobile h3 {
-    font-size: 16px;
-}
-
-.post-details {
-    margin-top: 0px;
-    margin-left: 10px;
+.post-description {
+    color:rgba(0, 0, 0, 0.70);
+    font-size: 17px;
 }
 
 .post-details-mobile {
@@ -37,15 +18,14 @@
 }
 
 .date {
-    color: white;
-    text-align: center;
-    font-size: 18px;
-    line-height: 20px;
-    margin: 0;
+    font-size: 15px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.70);
+    margin-bottom: 0;
 }
 
-.post {
-    margin-bottom: 45px;
+.posts {
+    margin-bottom: 20px;
 }
 
 .post-mobile {
@@ -57,17 +37,8 @@
     font-size: 20px;
 }
 
-.pic {
-    margin-top: 25px;
-}
-
-.about {
-    margin-top: 0px;
-}
-
 .about-text {
-    color: rgb(95, 95, 95);
-    margin-bottom: 1px;
+    color: rgba(0, 0, 0, 0.80);
 }
 
 .icon {

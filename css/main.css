@@ -30,6 +30,7 @@ a:link, a:visited {
     font-size:20px;
     font-weight: 400;
     text-align: center;
+    flex-basis: auto !important;
 }
 
 .mobile-header {
@@ -46,4 +47,6 @@ a:link, a:visited {
 .portrait-image {
     border-radius: 50%;
     max-width: 70%;
+    max-height: 60px;
+    flex-basis: auto !important;
 }

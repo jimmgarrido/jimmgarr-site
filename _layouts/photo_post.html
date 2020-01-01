@@ -7,7 +7,7 @@
 
 	<title>{{ page.title }}</title>
 
-	<link rel="stylesheet" href="/css/bootstrap.css">
+	<link rel="stylesheet" href="/css/mini-default.min.css" >
 	<link rel="stylesheet" href="/css/post.css">
 	<link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/jekyll-photo-gallery.css">
@@ -88,21 +88,18 @@
 </head>
 
 <body>
-	<!--Top-bar-->
-	<div class="top-bar row no-gutters"></div>
-
 	<div class="container">
 		
 		{% include header.html %}
 
 		<!--Content-->
 		<div class="row">
-			<div class="col-auto">
+			<div class="col-sm-8 col-sm-offset-2">
 				<h3> Albums > {{ page.title }} </h3>
 			</div>
 		</div>
-		<div class="row justify-content-center">
-			<div class="col-11 col-sm-12" id="swipeboxContainer">
+		<div class="row">
+			<div class="col-sm-8 col-sm-offset-2" id="swipeboxContainer">
 
 				{{ content }}
 

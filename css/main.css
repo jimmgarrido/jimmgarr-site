@@ -31,6 +31,7 @@ a:link, a:visited {
     font-weight: 400;
     text-align: center;
     flex-basis: auto !important;
+    margin-left: 16px;
 }
 
 .mobile-header {

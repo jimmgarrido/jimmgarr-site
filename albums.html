@@ -5,14 +5,10 @@ layout: album_page
 <div class="row album-list">
 	{% for post in site.tags.photos %}
 	<div class="col-sm-10 col-md-8 col-lg-6 col-sm-offset-1 col-md-offset-2 col-lg-offset-3">
-		<div class="card hover-container">
-			<img class="card-img-top" src="{{ post.thumbnail }}">
-			<a href="{{ post.url }}">
-				<div class="overlay">
-					<h2 class="hover-text">{{ post.title }}</h2>
-				</div>
-			</a>
-		</div>
+			<div class="row cols-sm-4">
+                    <a href="https://www.flickr.com/photos/183261715@N03/49297553222/in/album-72157712469436478/" title="DSC_0271"><img src="https://live.staticflickr.com/65535/49297553222_22785e6c5c.jpg" alt="DSC_0271"></a>
+                    <a href="https://www.flickr.com/photos/183261715@N03/49313563916/in/album-72157712469436478/" title="DSC02001"><img src="https://live.staticflickr.com/65535/49313563916_385a25a89f.jpg" alt="DSC02001"></a>
+			</div>
 	</div>
 	<!-- <div class="col-6 col-sm-5 d-md-none">
 		<div class="card hover-container">

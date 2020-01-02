@@ -5,7 +5,7 @@ layout: home_page
 ---
 {% for post in site.tags.blog limit:3 %}
 <div class="row">
-	<div class="col-sm-12 col-md-offset-2 col-lg-offset-3 posts">
+	<div class="col-sm-12 col-md-8 col-lg-6 col-md-offset-2 col-lg-offset-3 posts">
 		<h4 class="date">
 			{{ post.date | date: "%-d %B %Y" }}
 			<!-- {% assign m = post.date | date: "%B" %} 

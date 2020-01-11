@@ -5,51 +5,13 @@ layout: home_page
 ---
 {% for post in site.tags.blog limit:3 %}
 <div class="row">
-	<div class="col-sm-12 col-md-8 col-lg-6 col-md-offset-2 col-lg-offset-3 posts">
+	<div class="col-sm-12 col-md-10 col-lg-6 col-md-offset-1 col-lg-offset-3 posts">
 		<h4 class="date">
 			{{ post.date | date: "%-d %B %Y" }}
-			<!-- {% assign m = post.date | date: "%B" %} 
-			{% case m %}
-			{% when 'April' or 'May' or 'June' or 'July' %}{{ m }}
-			{% when 'September' %}Sept
-			{% else %}{{ post.date | date: "%b" }}
-			{% endcase %}	
-			{{ post.date | date: "%-d %Y" }} -->
 		</h4>
 		<a href="{{ post.url }}">
 			<h2 class="post-title">{{ post.title }}</h2></a>
 		<p class="post-description">{{ post.description }}</p>
-	</div>
-</div>
-
-<div hidden>
-	<div class="row">
-		<div class="col-11">
-			<div class="post-mobile row">
-				<div class="col-auto">
-					<div class="date-block-mobile">
-						<h3 class="date">
-							{% assign m = post.date | date: "%B" %} 
-							{% case m %}
-							{% when 'April' or 'May' or 'June' or 'July' %}{{ m }}
-							{% when 'September' %}Sept
-							{% else %}{{ post.date | date: "%b" }}
-							{% endcase %}	
-						</h3>
-						<h3 class="date">
-							{{ post.date | date: "%-d" }}
-						</h3>
-					</div>
-				</div>
-				<div class="col-8">
-					<div class="post-detail-mobile">
-						<a href="{{ post.url }}">
-							<h3>{{ post.title }}</h3></a>
-							<h3><small>{{ post.description }}</small></h3>
-					</div>
-				</div>
-			</div>
-		</div>
 	</div>
 </div>
 {% endfor %}

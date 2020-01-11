@@ -1,26 +1,17 @@
-h1 {
-    font-weight: 400;
-}
-
 .post-title {
     margin-top: 2px;
-    text-align: left;
-    color: inherit;
+    margin-bottom: 6px;
 }
 
 .post-description {
-    color:rgba(0, 0, 0, 0.70);
+    color:rgb(58,58,60);
     font-size: 17px;
-}
-
-.post-details-mobile {
-    margin-left: 10px;
 }
 
 .date {
     font-size: 15px;
     font-weight: 400;
-    color: rgba(0, 0, 0, 0.70);
+    color: rgb(99, 99, 102);
     margin-bottom: 0;
 }
 
@@ -38,10 +29,20 @@ h1 {
 }
 
 .about-text {
-    color: rgba(0, 0, 0, 0.80);
+    color:rgb(58,58,60);
 }
 
 .icon {
     margin-right: 20px;
     font-size: 32px;
 } 
+
+@media (prefers-color-scheme: dark) {
+    .date {
+        color: rgb(142, 142, 147);
+    }
+
+    .post-description {
+        color: rgb(215, 215, 216);
+    }
+}

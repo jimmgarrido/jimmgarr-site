@@ -8,7 +8,7 @@ permalink: /posts/quick-look/
 
 Quick Look is a built in framework on macOS and iOS that lets you present file previews within your app. You may already be familiar with it on macOS where pressing the Space bar inside Finder will bring up a preview for certain files. On iOS, there are actually two ways to use Quick Look: with a document interaction controller ([`UIDocumentInteractionController`](https://developer.xamarin.com/api/type/UIKit.UIDocumentInteractionController/)) or with the framework directly ([`QLPreviewController`](https://developer.xamarin.com/api/type/QuickLook.QLPreviewController/)). 
 
-For the purposes of this guide, we'll be using a new iOS app project that has a navigation controller with a `UITableViewContoller` as its root. Inside the table source class we have a string array with the paths to some local files:
+For the purposes of this guide, we'll be using a new iOS app project that has a navigation controller with a `UITableViewController` as its root. Inside the table source class we have a string array with the paths to some local files:
 
 ```csharp
 public static string[] Documents = {
@@ -17,7 +17,7 @@ public static string[] Documents = {
 };
 ```
 
-**You can check out and download the complete sample app from [Github](https://github.com/jimmgarrido/document-interaction-sample).**
+You can check out and download the complete sample app from [Github](https://github.com/jimmgarrido/document-interaction-sample).
 
 ## Document Interaction Controller
 
@@ -109,7 +109,7 @@ public class QuickLook : IQLPreviewControllerDataSource
 Since `GetPreviewItem` needs to return a `IQLPreviewItem` object, also create another class that inherits from [`QLPreviewItem`](https://developer.xamarin.com/api/type/QuickLook.QLPreviewItem/). This will be the wrapper class for the preview items, so override the `ItemUrl` property to return a valid path for the selected file. Overriding `ItemTitle` is optional and can be used to customize the title shown for the file:
 
 ```csharp
- public class PreviewItem : QLPreviewItem
+public class PreviewItem : QLPreviewItem
 {
     nint itemIndex;
     NSUrl fileUrl;
@@ -151,9 +151,8 @@ previewController.Delegate = sourceDelegate;
 previewController.DataSource = sourceDelegate;
 
 previewController.CurrentPreviewItemIndex = indexPath.Row;
-NavigationController.PushViewController(previewController, true); 
+NavigationController.PushViewController(previewController, true);
 ```
-
 
 {% include image.html
     img="assets/quicklook.gif"

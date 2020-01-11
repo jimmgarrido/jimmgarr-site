@@ -5,7 +5,6 @@
 
 .post h3 {
     font-size: 1.3rem;
-    color: rgba(33, 37, 41, 0.90);
 }
 
 ol {
@@ -13,14 +12,15 @@ ol {
 }
 
 li {
-    color:rgba(0, 0, 0, 0.7);
+    color:rgb(58,58,60);
     font-size: 17px;
 }
 
 p {
-    color:rgba(0, 0, 0, 0.70);
+    color:rgb(58,58,60);
     font-size: 17px;
-    margin-bottom: 16px;
+    margin-bottom: 25px;
+    line-height: 1.52947;
 }
 
 .nav>li>a {
@@ -40,19 +40,21 @@ p {
 }
 
 .image-caption {
-    color: rgba(0, 0, 0, 0.7);
+    color:rgb(58,58,60);
     font-size: 15px;
     font-style: italic;
 }
 
 .post-title {
     margin-top: 2px;
+    margin-bottom: 30px;
+    font-size: 36px;
 }
 
-#date {
+.date {
     font-size: 15px;
     font-weight: 400;
-    color: rgba(0, 0, 0, 0.70);
+    color: rgb(99, 99, 102);
     margin-bottom: 0;
 }
 
@@ -60,7 +62,7 @@ p {
     text-align: center;
     margin: 2.0rem 0;
     font-size: 1.2rem;
-    color: rgba(0, 0, 0, 0.6)
+    color:rgb(58,58,60);
 }
 
 code>span {
@@ -78,7 +80,50 @@ code>span {
 
 .highlighter-rouge {
     font-size: 14px;
-    background-color: #f5f5f5;
     border: 1px solid #d9d9d9;
-    border-radius: 4px;
+    border-radius: 2px;
+}
+
+@media (prefers-color-scheme: dark) {
+    .date {
+        color: rgb(142, 142, 147);
+    }
+
+    p {
+        color: rgb(215, 215, 216);
+    }
+
+    pre {
+        background-color: rgb(49, 50, 49);
+    }
+
+    .highlighter-rouge {
+        font-size: 14px;
+        border: 1px solid rgb(68,68,68);
+        border-radius: 2px;
+    }
+
+    code {
+        background: initial;
+    }
+
+    .post h3 {
+        color: rgb(215, 215, 216);
+    }
+
+    li {
+        color: rgb(215, 215, 216);
+    }
+
+    .image-caption {
+        color: rgb(215, 215, 216);
+    }
+
+    #signature {
+        color: rgb(215, 215, 216);
+    }
+
+    .post a:link, .post a:visited {
+        color:rgb(102, 187, 255);
+    }
 }

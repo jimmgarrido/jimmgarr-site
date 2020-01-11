@@ -1,18 +1,11 @@
-h1 {
-    font-size: 38px;
-    font-weight: 300;
-    text-align: center;
-    margin: 25px 0 10px 0;
-    color: rgba(0,0,0,0.6);
-}
-
 .post h2 {
     font-size: 1.4rem;
+    margin-top: 20px;			
 }
 
 .post h3 {
-    font-size: 1.2rem;
-    color: rgba(33, 37, 41, 0.85)				
+    font-size: 1.3rem;
+    color: rgba(33, 37, 41, 0.90);
 }
 
 ol {

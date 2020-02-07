@@ -78,6 +78,10 @@ code>span {
     border:none;
 }
 
+.highlight .kt {
+    color: rgb(0, 0, 255);
+}
+
 .highlighter-rouge {
     font-size: 14px;
     border: 1px solid #d9d9d9;
@@ -94,7 +98,7 @@ code>span {
     }
 
     pre {
-        background-color: rgb(49, 50, 49);
+        background-color: rgb(62, 63, 62);
     }
 
     .highlighter-rouge {
@@ -125,5 +129,17 @@ code>span {
 
     .post a:link, .post a:visited {
         color:rgb(102, 187, 255);
+    }
+
+    .highlight .k, .highlight .kt  {
+        color: rgb(0, 200, 234);
+    }
+
+    .highlight .nc {
+        color: rgb(220, 205, 15);
+    }
+
+    .highlight .s {
+        color: rgb(31, 214, 10);
     }
 }

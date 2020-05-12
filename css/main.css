@@ -2,9 +2,19 @@ html {
     overflow-y: scroll;
 }
 
+body {
+    background-color: rgb(225, 213, 207);
+    color: rgb(13, 68, 128);
+}
+
+h1 {
+    font-size: 48px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 .about p {
     font-size: 20px;
-    font-weight: 350;
 }
 
 a:hover, a:focus {
@@ -12,7 +22,11 @@ a:hover, a:focus {
 }
 
 a:link, a:visited {
-    color: rgb(1, 100, 200);
+    color: rgb(13, 68, 128);
+}
+
+#welcome {
+    margin: 20px 0;
 }
 
 .header {
@@ -21,7 +35,7 @@ a:link, a:visited {
 }
 
 .header a {
-    color:rgb(58,58,60);
+    color:rgb(13, 68, 128);
 }
 
 .header h2 {

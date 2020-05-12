@@ -5,14 +5,15 @@
 
 .post-description {
     color:rgb(58,58,60);
-    font-size: 17px;
+    font-size: 18px;
 }
 
 .date {
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 400;
-    color: rgb(99, 99, 102);
+    color: rgb(58,58,60);
     margin-bottom: 0;
+    font-style: italic;
 }
 
 .posts {

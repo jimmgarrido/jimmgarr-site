@@ -2,6 +2,10 @@ html {
     overflow-y: scroll;
 }
 
+.about {
+    text-align: center;
+}
+
 .about p {
     font-size: 20px;
     font-weight: 350;

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"></meta>
       <meta charset="utf-8"></meta>
@@ -18,17 +17,37 @@
           grid-auto-flow: row;
           gap: 16px;
         }
+        p {
+          margin: 6px 0;
+        }
         .row {
           display: grid;
-          grid-template-columns: 1fr 1fr 1fr;
-          padding: 8px;
-          border-bottom: 1px solid #2a2a2a;
+          grid-template-columns: 2fr 1fr;
+          grid-template-rows: auto auto;
+          padding: 8px 16px;
+          border-bottom: 1px solid #dddddd;
         }
-        .header {
-          text-align: center;
+        .header-row {
+          /* text-align: center; */
         }
-        .row p:last-child {
-          /* text-align: right; */
+        .sub-header-row {
+          background-color: whitesmoke;
+          color: #2a2a2a;
+        }
+        .row:has(+ .sub-header-row) {
+          border: none;
+        }
+        .row p:nth-child(1) {
+          flex-basis: 20%;
+        }
+        .row p:nth-child(2) {
+          flex-grow: 1;
+          text-align: right;
+        }
+        .row p:nth-child(3) {
+          text-align: right;
+          grid-row: 2;
+          grid-column: 2;
         }
         @media screen and (min-width: 481px) {
           .grid {
@@ -40,10 +59,9 @@
   </head>
   <body>
     <div class="grid">
-      <div class="row header">
+      <div class="row header-row">
         <p><b>Cheat / Effect</b></p>
-        <p><b>Phone # [1-999-]</b></p>
-        <p><b>T9</b></p>
+        <p><b>Phone Number</b></p>
       </div>
       <div class="row">
         <p class="name">Lower Wanted Level</p>
@@ -51,38 +69,21 @@
         <p>LAWYERUP</p>
       </div>
       <div class="row">
-        <p class="name">All Weapons</p>
-        <p>1-999-866-587</p>
-        <p>TOOLUP</p>
+        <p class="name">Raise Wanted Level</p>
+        <p>1-999-3844-8483</p>
+        <p>FUGITIVE</p>
       </div>
-      <div class="row">
-        <p class="name">Max Health Armor</p>
-        <p>1-999-887-853</p>
-        <p>TURTLE</p>
-      </div>
-      <div class="row">
-        <p class="name">Comet</p>
-        <p>1-999-266-38</p>
-        <p>COMET</p>
-      </div>
+      <div class="row sub-header-row" id="health">Health</div>
       <div class="row">
         <p class="name">Invincibility</p>
         <p>1-999-724-654-5537</p>
         <p>PAINKILLER</p>
       </div>
+      <div class="row sub-header-row" id="weapons">Weapons</div>
       <div class="row">
-        <p class="name">Buzzard Attack Helicopter</p>
-        <p>1-999-289-9633</p>
-        <p>BUZZOFF</p>
-      </div>
-      <div class="row">
-        <p class="name">Give Parachute</p>
-        <p>1-999-759-3483</p>
-        <p>SKYDIVE</p>
-      </div>
-      <div class="row">
-        <p class="name">Random Explosion/Phone Model Change</p>
-        <p>1-999-367-3767</p>
+        <p class="name">All Weapons</p>
+        <p>1-999-866-587</p>
+        <p>TOOLUP</p>
       </div>
       <div class="row">
         <p class="name">Flaming Bullets</p>
@@ -100,34 +101,25 @@
         <p>HOTHANDS</p>
       </div>
       <div class="row">
-        <p class="name">Moon Gravity</p>
-        <p>1-999-356-2837</p>
-        <p>FLOATER</p>
+        <p class="name">Max Health Armor</p>
+        <p>1-999-887-853</p>
+        <p>TURTLE</p>
       </div>
       <div class="row">
-        <p class="name">Raise Wanted Level</p>
-        <p>1-999-3844-8483</p>
-        <p>FUGITIVE</p>
+        <p class="name">Give Parachute</p>
+        <p>1-999-759-3483</p>
+        <p>SKYDIVE</p>
+      </div>
+      <div class="row sub-header-row" id="vehicles">Vehicles</div>
+      <div class="row">
+        <p class="name">Comet</p>
+        <p>1-999-266-38</p>
+        <p>COMET</p>
       </div>
       <div class="row">
-        <p class="name">Drunk Mode</p>
-        <p>1-999-547-861</p>
-        <p>LIQUOR</p>
-      </div>
-      <div class="row">
-        <p class="name">Recharge Ability</p>
-        <p>1-999-769-3787</p>
-        <p>POWERUP</p>
-      </div>
-      <div class="row">
-        <p class="name">Slow Motion - 3 levels</p>
-        <p>1-999-756-966</p>
-        <p>SLOWMO</p>
-      </div>
-      <div class="row">
-        <p class="name"> Skyfall (Launches you into the sky)</p>
-        <p>1-999-759-3255</p>
-        <p>SKYFALL</p>
+        <p class="name">Buzzard Attack Helicopter</p>
+        <p>1-999-289-9633</p>
+        <p>BUZZOFF</p>
       </div>
       <div class="row">
         <p class="name">BMX</p>
@@ -179,6 +171,7 @@
         <p>1-999-2276-78676</p>
         <p>BARN-STORM</p>
       </div>
+      <div class="row sub-header-row" id="status">Status</div>
       <div class="row">
         <p class="name">Slow Motion Aiming - 3 levels</p>
         <p>1-999-332-3393</p>
@@ -198,6 +191,31 @@
         <p class="name">Drifting Cars</p>
         <p>1-999-766-9329</p>
         <p>SNOWDAY</p>
+      </div>
+      <div class="row">
+        <p class="name">Moon Gravity</p>
+        <p>1-999-356-2837</p>
+        <p>FLOATER</p>
+      </div>
+      <div class="row">
+        <p class="name">Drunk Mode</p>
+        <p>1-999-547-861</p>
+        <p>LIQUOR</p>
+      </div>
+      <div class="row">
+        <p class="name">Recharge Ability</p>
+        <p>1-999-769-3787</p>
+        <p>POWERUP</p>
+      </div>
+      <div class="row">
+        <p class="name">Slow Motion - 3 levels</p>
+        <p>1-999-756-966</p>
+        <p>SLOWMO</p>
+      </div>
+      <div class="row">
+        <p class="name"> Free Fall</p>
+        <p>1-999-759-3255</p>
+        <p>SKYFALL</p>
       </div>
     </div>
   </body>
